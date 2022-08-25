@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
+.container__left__icon > h4 > a {
+  text-decoration: none;
+  color: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.nav__bar {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(161, 143, 161, 1);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(161, 143, 161, 1);
+  box-shadow: 0px 3px 5px 0px rgba(161, 143, 161, 1);
+  height: 60px;
+}
+.logo__box {
+  display: flex;
+  width: 100%;
+}
+
+.logo__img__section {
+  /* border: 1px solid red; */
+  left: 20px;
+  top: 5px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+.logo__name {
+  width: 80px;
+  height: 50px;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.nav__links {
+  display: flex;
+  height: 20px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  list-style-type: none;
+
+  /* border: 1px solid red; */
+}
+.nav__links li {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.nav__links > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link__section {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.login__section {
+  display: flex;
+  position: fixed;
+  right: 2vw;
+  top: 10px;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  /* margin-left: 15%; */
+}
+
+.login__section button,
+.login__section span {
+  background-color: white;
+  border: none;
+  margin-left: 2%;
+}
+.login__section button {
+  background-color: white;
+  margin: 5% 0%;
+  border: none;
+}
+.footer {
+  background-color: black;
+  color: white;
+  padding: 2%;
+}
+.footer__top {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.footer__top__para p {
+  font-size: 12px;
+  color: lightgray;
+  width: 80%;
+}
+.footer__logo {
+  width: 150px;
+}
+.footer__top__list {
+  list-style-type: none;
+  text-align: right;
+}
+.app__store {
+  width: 120px;
+}
+.app__store__container {
+  margin-left: 20%;
+}
+.footer__bottom {
+  font-size: 12px;
+  color: lightgray;
+  padding: 2%;
+  width: 70%;
+  margin: auto;
+  /* border: 1px solid red; */
+  background-color: rgb(17, 18, 19);
+}
+.footer__bottom__lists {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.footer__bottom__lists > ul {
+  padding: 0% 2% 0% 0%;
+  /* border: 1px solid red; */
+  line-height: 1.5em;
+}
+.list1 {
+  list-style-type: none;
+  width: 14%;
+}
+.bottom__links {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+.bottom__links__link {
+  width: 85%;
+  font-size: 10px;
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: start;
+  align-items: center;
+}
+.bottom__links__link a {
+  padding: 1% 2% 0% 1%;
+}
+.bottom__links__logo {
+  width: 15%;
+  display: flex;
+  justify-content: end;
+}
+.bottom__links__logo > i {
+  padding: 2%;
+  margin: auto;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+.dropdown__content {
+  display: none;
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  -webkit-box-shadow: 0px -6px 18px 1px rgba(207, 214, 214, 1);
+  -moz-box-shadow: 0px -6px 18px 1px rgba(207, 214, 214, 1);
+  box-shadow: 0px -6px 18px 1px rgba(207, 214, 214, 1);
+  top: 110%;
+  right: -30%;
+  padding: 10px;
+}
+.dropdown__block {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.dropdown__block > div {
+  /* border: 1px solid red; */
+  text-align: left;
+  padding: 5px;
+}
+
+a {
+  cursor: pointer;
+}
+a:active {
+  color: rgb(253, 131, 171);
+}
+a[tabindex="1"]:focus {
+  color: rgb(253, 131, 171);
+  outline: none;
+}
+.page {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+.video__section > h3 {
+  width: 80%;
+  margin: 2% auto;
+}
+/* faq section code */
+.app__FAQ {
+  background: #f2f4f8;
+  padding: 2%;
+}
+/* .FAQ__top__left > h1,
+.FAQ__top__left > h3 {
+  margin: 8px;
+} */
+.FAQ__top__left > h3 {
+  color: #6a6a6a;
+  font-weight: normal;
+}
+.app__FAQ__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 5px;
+  width: 70%;
+  margin: auto;
+}
+.app__FAQ__bottom {
+  /* margin: 5%; */
+  width: 70%;
+  margin: auto;
+}
+.accordion {
+  display: flex;
+  font-family: "FontAwesome";
+  justify-content: space-between;
+  background: transparent;
+  border-bottom: 1px solid;
+  color: #6e6e6e;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 18px;
+  background-color: transparent;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  content: "\f078";
+  color: #777;
+  font-weight: bold;
+  color: #ff3278;
+  margin-left: 5px;
+  transition: 1s;
+}
+
+.active:after {
+  content: "\f077";
+  color: #ff3278;
+  height: auto;
+  transition: 1s;
+}
+.panel > p {
+  width: 90%;
+  text-align: justify;
+}
+hr {
+  border-color: transparent;
+  border-top: 0.5px solid rgb(231, 231, 231);
+  background-color: transparent;
+}
+/* faq ends here */
+/* voucher css */
+.voucher__section {
+  width: 90%;
+  margin: auto;
+  line-height: 10px;
+  /* border: 1px solid red; */
+}
+.voucher__container {
+  display: flex;
+  /* border: 1px solid red; */
+  width: 500px;
+}
+.voucher {
+  z-index: -1;
+  background-color: rgb(65, 65, 82);
+  margin: 2%;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.voucher h1 {
+  margin-top: 0%;
+}
+.voucher button {
+  background: rgb(251, 58, 87);
+  background: linear-gradient(
+    67deg,
+    rgba(251, 58, 87, 1) 45%,
+    rgba(248, 68, 52, 1) 61%
+  );
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  width: 120px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+.circle__white {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+}
+.circle__white__right {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+}
+/* 
+voucher ends */
+/* clock */
+.clock__container {
+  background-color: rgb(236, 236, 236);
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 0%;
+  margin-top: -5px;
+}
+.clock {
+  width: 10%;
+  margin: auto;
+  line-height: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.clock h3 {
+  font-size: 16px;
+}
+/*  clock ends */
+/* subscription section */
+.membership {
+  margin: 2% auto;
+  background-color: #586284;
+  width: 100%;
+  color: white;
+  padding-bottom: 2%;
+}
+.opt {
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.opttxt1 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.opttxt2 {
+  margin-top: -30px;
+  margin-bottom: 10px;
+  color: rgb(136, 142, 158);
+  font-size: 12px;
+}
+.opttxt3 {
+  display: flex;
+  width: 100%;
+}
+.line {
+  border: 0.5px solid white;
+  width: 60%;
+  height: 0;
+  margin-top: 10px;
+}
+.opttxt3 > h3 {
+  width: 60%;
+  font-size: 12px;
+  margin-top: -0.5px;
+}
+.workout {
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+.workoutIconbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  /* border: 1px solid red; */
+  margin: auto;
+  font-size: 12px;
+}
+.subscription {
+  text-align: center;
+}
+.subscriptionbox {
+  width: 60%;
+  margin: auto;
+}
+.subscriptionlist {
+  display: flex;
+  cursor: pointer;
+}
+.sub1 {
+  flex-basis: 32%;
+  display: flex;
+  background-color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 1%;
+}
+.subrate {
+  color: black;
+  margin-left: 7%;
+  inline-size: -10px;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  margin-top: -20%;
+}
+.discount {
+  text-decoration: line-through;
+  margin-right: 8px;
+  color: rgb(155, 155, 155);
+}
+.validity {
+  color: rgb(155, 155, 155);
+  margin-top: -12%;
+}
+.buy {
+  color: red;
+  margin-top: 3%;
+  width: 40%;
+  text-align: right;
+}
+.instedDiscount {
+  display: flex;
+  flex-direction: row;
+}
+.instentondebit {
+  flex-basis: 32%;
+  display: flex;
+  background-color: rgb(216, 232, 255);
+  height: 11%;
+  border-radius: 10px;
+  margin-left: 1%;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px dotted black;
+  color: rgb(54, 54, 54);
+  font-size: 13px;
+}
+/* subscription end */
+/* workout section */
+.workout__section {
+  width: 65%;
+  margin: auto;
+}
+.workout__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img__cards {
+  margin: 2% auto;
+  height: 150px;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: auto;
+  order: 2;
+  position: relative;
+  z-index: -1;
+}
+.work__tag {
+  position: absolute;
+  top: 4%;
+  left: 7%;
+}
+/* workout section */
+/* quote section */
+.quote__section {
+  width: 65%;
+  margin: 5% auto;
+  line-height: 2%;
+}
+.larger__text {
+  font-size: 50px;
+  font-weight: 700;
+}
+.large__text {
+  font-size: 45px;
+  font-weight: 700;
+  color: #6a6a6a;
+}
+/* quote section */
+/* tiny faq */
+.tiny__faq {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+.tiny__block h6 {
+  font-size: 11px;
+  margin-bottom: -1%;
+}
+.tiny__block {
+  width: 46%;
+  font-size: 10px;
+  padding: 2%;
+  /* height: 280px; */
+  text-align: justify;
+}
+/* tiny faq */
