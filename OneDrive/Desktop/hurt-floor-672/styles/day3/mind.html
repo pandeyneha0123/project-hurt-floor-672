@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online PT</title>
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/icon type">
+    <link rel="stylesheet" href="/fa/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/styles/mind.css">
+    <link rel="stylesheet" href="/styles/care_navbar.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet">
+
+    <style>
+      
+        .item {
+      visibility: hidden;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #fd306b;
+      bottom: 65%;
+      right: 10%;
+      padding: 1%;
+      color: white;
+      border-radius: 100%;
+    }
+
+        </style>
+
+</head>
+<body onload="checkCartValue()">    
+    <div class=nav__bar>
+        <div class=logo__box>
+            <div class=logo__img__section>
+                <div class=logo>
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg"></img>
+                </div>
+                <div class=logo__name>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cultfit.svg"></img>
+                </div>
+                <button type="submit" style="cursor: pointer; background-color: white; border: none" ><i class="fa fa-chevron-down" aria-hidden="true"></i></button >
+            </div>
+            <div class="link__section">
+                <ul class=nav__links>
+                    <li><a href="/pages/loggedIn.html" tabindex="1">Fitness</a></li>
+                    <li><a href="/pages/mind.html" tabindex="1">Care</a></li>
+                    <li><a href="/pages/care.html" tabindex="1">Mind</a></li>
+                    <li><a href="/pages/store.html" tabindex="1">Store</a></li>
+                </ul>
+            </div>
+            <div class=login__section>
+                <i class="fa fa-circle" aria-hidden="true" style="color:cyan; font-size: 10px;"></i>
+                <button type="submit" style="cursor: pointer">Gorakhpur</button>
+                <span><img src="https://static.cure.fit/assets/images/user-image.svg"/></span>
+                <button id="login__btn" onclick=dropdown()><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button type="submit" style="cursor: pointer" onclick="window.location.href= '/pages/cart.html'"><img src="https://static.cure.fit/assets/images/cart-image.svg"/><div class="item" id="item">1</div></button>
+                <div id="dropdown__content" class="dropdown__content">
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/profile-icon.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/profile.html">Profile</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/cart-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/orders.html">orders</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/health-profile-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/medicalRecords.html">medical Records</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/combined-shape-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/packs.html">Active Packs</a>
+                      </div>   
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                        <img src="https://static.cure.fit/assets/images/coupon-black.svg"/>
+                      </div>
+                      <div>
+                          <a  href="/pages/red.html">Redeem Voucher</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div><i class="fa fa-cog" aria-hidden="true"></i></div>
+                      <div><a href="/pages/account.html" >Account</a></div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div><img src="https://static.cure.fit/assets/images/support-black.svg"/></div>
+                      <div>
+                          <a href="/pages/support.html">Support</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/logout-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/index.html">Logout</a>
+                      </div> 
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>  
+    <div class='app'>
+        <img id='fitstart' src='https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/23877b2f-09d0-4d57-b5c3-dc1f9046ee28.png'></img>
+        <img id='bestdeal' src='https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_1360:100/dpr_2/image/vm/6b3f0355-7178-4898-b4e8-d68b07a43bd6.png'></img>
+        <div id='clockBox'>
+            <div class='clock'>
+                <p id='limitedoffer'></p>
+                <img id='gooffer' src="https://static.cure.fit/assets/images/back-arrow-pink.svg">
+            </div>
+            <p id="limitedoffervalue">Hr : Min : Sec</p>
+        </div>
+        <div class='membership'>
+          <div class='opt'>
+            <div class='opttxt1'>
+              <h2>ONLINE CONSULTATION</h2>
+            </div>
+            <div class='opttxt2'>
+              <p>ONLINE CUNSULTATION</p>
+            </div>
+            <div class='opttxt3'>
+              <div class='line'></div>
+              <h3>Why   Buy   a     Pack?</h3>
+              <div class='line'></div>
+            </div>
+          </div>
+          <div class='workout'>
+              <div class='workoutIconbox'>
+                  <img class='workouticon' src='https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/home.png'></img>
+                  <p class='workouticontext'>packs tailored to your needs</p>
+              </div>
+              <div class='workoutIconbox'>
+                  <img class='workouticon' src='https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/cult.png'></img>
+                  <p class='workouticontext'>Hassle-free trgular care</p>
+              </div>
+              <div class='workoutIconbox'>
+                  <img class='workouticon' src='https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,c_fit/dpr_2/image/icons/livept/web/plan.png'></img>
+                  <p class='workouticontext'>Get professional guidance</p>
+              </div>
+          </div>
+          <div class='subscription'>
+              <h4>Select a Pack</h4>
+          </div>
+          <div class='subscriptionbox'>
+              <div class='subscriptionlist'>
+                  <div class='sub1'>
+                      <div class='subrate'>
+                          <p>12 sessions valid for 12 months</p>
+                          <div class="price">
+                              <p class="discount">₹ 12000 </p>
+                              <p>₹ 9000 </p>
+                          </div>
+                          
+                      </div>
+                      <div class="buy">
+                          <p>BUY</p>
+                      </div>
+                  </div>
+                  <div class='sub1'>
+                      <div class='subrate'>
+                          <p>8 sessions valid for 8 months</p>
+                          <div class="price">
+                              <p class="discount">₹ 8000 </p>
+                              <p>₹ 6400 </p>
+                          </div>
+                         
+                      </div>
+                      <div class="buy">
+                          <p>BUY</p>
+                      </div>
+                  </div>
+                  <div class='sub1'>
+                      <div class='subrate'>
+                          <p>4 sessions valid for 4 months</p>
+                          <div class="price">
+                              <p class="discount">₹ 4000 </p>
+                              <p>₹ 3600 </p>
+                          </div>
+                          
+                      </div>
+                      <div class="buy">
+                          <p>BUY</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="instedDiscount">
+                  <div class="instentondebit">
+                      <img class="instedicon" src='https://static.cure.fit/assets/images/offer-icon-copy.svg'></img>
+                      <p>get unlimited access to meditation & yoga live classes for 12 months</p>
+                  </div>
+                  <div class="instentondebit">
+                      <img class="instedicon" src='https://static.cure.fit/assets/images/offer-icon-copy.svg'></img>
+                      <p>get unlimited access to meditation & yoga live classes for 8 months</p>
+                  </div>
+                  <div class="instentondebit">
+                      <img class="instedicon" src='https://static.cure.fit/assets/images/offer-icon-copy.svg'></img>
+                      <p>get unlimited access to meditation & yoga live classes for 4 months</p>
+                  </div>
+              </div>
+              <div class="faicon">
+                <i class="fas fa-ellipsis-h"></i>
+                <i class="fas fa-less-than"></i>
+                <i class="fas fa-greater-than"></i>
+              </div>
+          </div>
+        </div>
+        <div class='easyworkoutBox'>
+          <div class='easyworkout'>
+            <p>WORKOUTS</p>
+            <div id="working">
+              <div class="sandc">
+                <p class="mummum">S&C</p>
+              </div>
+              <div class="yoga">
+                <p class="mummum">Yoga</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="keyfeatureBox">
+            <h2 id="textfeature">KEY FEATURES</h2>
+            <div id="keyfeatureiconBox">
+                <div class="keyfeatureicon">
+                    <img src="https://static.cure.fit/assets/images/QUALITY.svg">
+                    <h3>Quality Trainers</h3>
+                    <p class="trainingclass">Premium quality Cult trainers to provide you best personal training experience</p>
+                </div>
+                <div class="keyfeatureicon">
+                    <img id="convenience" src="https://static.cure.fit/assets/images/VIDEO.svg">
+                    <h3>Convenience</h3>
+                    <p class="trainingclass">Workout anytime, anywhere with Live video sessions</p>
+                </div>
+                <div class="keyfeatureicon">
+                    <img src="https://static.cure.fit/assets/images/PLAN.svg">
+                    <h3>Personalized Journey</h3>
+                    <p class="trainingclass">Workouts tailored to your fitness level and goal</p>
+                </div>
+                <div class="keyfeatureicon">
+                    <img src="https://static.cure.fit/assets/images/ATTENTION.svg">
+                    <h3>Personal Attention</h3>
+                    <p class="trainingclass">Learn correct techniques, form and posture with feedback from your trainer</p>
+                </div>
+            </div>
+        </div>
+        <div id="quicklink">
+            <h2>Quick Links</h2>
+            <h3>Support</h3>
+            <h3>Terms and Conditions</h3>
+        </div>
+        <div id="customerspeak">
+            <h2 id='customerspeaktext'>CUSTOMER SPEAK</h2>
+            <div id='customerreviewBox'>
+                <div class="customerBox">
+                    <img class="customerimg" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/w_52,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/vm/823287af-32b7-42aa-a1e2-90e07bfc9707.jpg">
+                    <div class="customerfeedback">
+                        <P>I had felt major disappoinment with Cult gyms getting closed due to the Covid19 situation. Before this, I had been a regular at Cult, enjoying a buffet of international quality exercises with great trainers. My sprit buoyed when Cult launched their live sessions <em style="color: #ff3278; margin-left: 10px;">read more</em></P>
+                        <h3 style="color: black;">Bhalachandra</h3>
+                    </div>
+                </div>
+                <div class="customerBox">
+                    <img class="customerimg" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/w_52,ar_1,fl_progressive,f_auto,q_auto:eco/dpr_2/image/vm/4bb0c5c0-5c7c-43f5-88d5-d6819b051894.jpg">
+                    <div class="customerfeedback">
+                        <P>With Cult PT sessions, I actually feel myself getting fitter and stronger. Even through the live sessions sre there, It just amps up your workout when you actually have someone interacting, motivating and pushing you even if it's via a laptop or a mobile screen. <em style="color: #ff3278; margin-left: 10px;">read more</em></P>
+                        <h3 style="color: black;">Sunaina D.K.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app__FAQ">
+            <div class="app__FAQ__top">
+              <div class="FAQ__top__left">
+                <h1>FAQS</h1>
+                <h3>4 QUESTIONS</h3>
+              </div>
+              <div class="FAQ__top_right">
+                <h4 style="color: #ff3278; margin-left: 20px;">SEE ALL</h4>
+              </div>
+            </div>
+            <div class="app__FAQ__bottom">
+              <button class="accordion">
+                <li>Can I take a trial Online PT session before I decide to buy a membership pack?</li>
+              </button>
+              <div class="panel">
+                <p>
+                  Absolutely! You can book an Online PT trial session from our app at a minimal price. How to:
+                       Click on more option at the bottom of the app, open the Cult tab Click on to Online PT tab
+                         Select 1 session on the membership tab Enter your details and preferences A trainer will
+                          be assigned to you basis your goals and preferences Pick a slot as per your convenience
+                           Click on Proceed to Pay to finish your booking.
+                </p>
+                <p>
+                  Do you find this helpful? &nbsp; &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">YES</strong> &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">NO</strong>
+                </p>
+              </div>
+              <hr />
+              <button class="accordion">
+                <li>Why should I buy a Online PT membership pack?</li>
+              </button>
+              <div class="panel">
+                <p>
+                  The journey towards fitness and health is a continuous and a regular one.
+                       A consistent workout schedule will help you achieve your health and fitness goals.
+                        A membership pack will help you stick to your fitness plan as it needs you to make a commitment.
+                </p>
+                <p>
+                  Do you find this helpful? &nbsp; &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">YES</strong> &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">NO</strong>
+                </p>
+              </div>
+              <hr />
+              <button class="accordion">
+                <li>How should I prepare for my first Online PT class?</li>
+              </button>
+              <div class="panel">
+                <p>
+                  Ensure you have good internet connectivity, camera & audio permissions are set. Wear comfortable attire for workout
+                       and choose a spot with minimal disturbance Complete the workouts at your own pace and whenever you feel uncomfortable,
+                        stop and let the trainer know, if you have any injuries inform the trainer Post the first class you might have soreness,
+                         it's absolutely normal. A good warm-up and the right cool down (stretch) will minimize soreness to a large extent. 
+                         Recovery meal: Grab a meal that contains easily digestible proteins (like a bowl of pulses) within 30-45 mins of the workout.
+                          Avoid dairy or heavily processed protein powders. Drink 2.5-3 liters of water daily to replace the lost fluids.
+                </p>
+                <p>
+                  Do you find this helpful? &nbsp; &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">YES</strong> &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">NO</strong>
+                </p>
+              </div>
+              <hr />
+              <button class="accordion">
+                <li>I want to know more about your trainers.</li>
+              </button>
+              <div class="panel">
+                <p>
+                  All our trainers are highly skilled and are experts in their formats.
+                       We will assign you the best trainers based on your fitness goals .
+                        You will get the details of the trainer during booking a session.
+                          You will not be able to change the trainer for your very first session
+                           on Online PT as we match the trainer profile based on your goals and requirements.
+                            From second session onwards, you can change the trainer while booking the session.
+                       While changing the trainer you'll have an option to choose from your past preferred trainers.
+                </p>
+                <p>
+                  Do you find this helpful? &nbsp; &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">YES</strong> &nbsp; &nbsp; &nbsp;
+                  <strong style="color: #ff3278">NO</strong>
+                </p>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+    <div class="footer">
+        <div class="footer__top">
+            <div class="footer__top__section1">
+                <div class="footer__logo">
+                    <img src="https://static.cure.fit/assets/images/cf-logo.svg"></img>
+                </div> 
+                <div class="footer__top__para">
+                    <p>At cure.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation,
+                         and medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
+                </div>  
+            </div>
+            <div>
+                <ul class="footer__top__list">
+                    <li>CONTACT US</li>
+                    <li>BLOG</li>
+                    <li>CULT FRANCHISE</li>
+                    <li>PARTNER.FIT</li>
+                    <li>TALKS</li>
+                    <li>CAREERS</li>
+                </ul>
+            </div>
+            <div class="app__store__container">
+                <div class="app__store">
+                    <img src="https://static.cure.fit/assets/images/app-store.svg" alt="app store icon">
+                </div>
+                <div class="app__store">
+                    <img src="https://static.cure.fit/assets/images/play-store.svg" alt="google play icon">
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <h4>RELATED SEARCH<hr/></h4>
+            
+            <div class="footer__bottom__lists">
+                <ul class="list1">
+                    <li><a>Gyms Near Me</a></li>
+                    <li><a>Yoga for Back Pain</a></li>
+                    <li><a>Chest Workouts for Men</a></li>
+                    <li><a>Weight Loss Workout</a></li>
+                    <li><a>Yoga Poses for Weight Loss</a></li>
+                    <li><a>Spine Exercises</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Online Personal Training</a></li>
+                    <li><a>Thigh Exercises</a></li>
+                    <li><a>Upper Body Workout</a></li>
+                    <li><a>Yoga For Flexibility</a></li>
+                    <li><a>Yoga Poses for Beginners</a></li>
+                    <li><a>Surya Namaskar for Beginners</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Reduce Belly Fat</a></li>
+                    <li><a>Fat Burning Exercises</a></li>
+                    <li><a>Chest Exercises at Home</a></li>
+                    <li><a>Core Strengthening Exercises</a></li>
+                    <li><a>Chest Workouts for Women</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Dance Fitness</a></li>
+                    <li><a>Tummy Exercises</a></li>
+                    <li><a>HRX Workout</a></li>
+                    <li><a>Exercise for Kids</a></li>
+                    <li><a>Bodyweight Squats</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Cardio Exercisee</a></li>
+                    <li><a>Arms Workout</a></li>
+                    <li><a>Six Pack Workout</a></li>
+                    <li><a>Lower Chest Workout</a></li>
+                    <li><a>Exercise to Increase Stamina</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>HIIT Workout</a></li>
+                    <li><a>Lower Back Exercises</a></li>
+                    <li><a>Yoga Postures for Beginners</a></li>
+                    <li><a>Upper Chest Workout</a></li>
+                    <li><a>Oblique Workouts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom__links">
+            <div class="bottom__links__link"> 
+                <a>Contact Us</a>
+                <a>FAQ</a>
+                <a>Terms & Condition</a>
+                <a>Privacy Policy</a>
+                <a>Refund Policy</a>
+            </div>
+            <div class="bottom__links__logo">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+<script src="/scripts/item.js"></script>
+
+    <script src="/scripts/mind.js"></script>
+    <script src="/scripts/cult.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+  
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = "200px";
+            }
+          });
+        }
+      </script>
+</body>
+</html>

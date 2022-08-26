@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
+.container__left__icon > h4 > a {
+  text-decoration: none;
+  color: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.payment__option {
+  display: flex;
+  width: 400px;
+  border-bottom: 1px solid gray;
+}
+
+.payment__option p {
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+.payment__option > p:nth-child(1) {
+  margin-left: 0%;
+}
+
+.payment__option > p:nth-child(3) {
+  margin-right: 0%;
+}

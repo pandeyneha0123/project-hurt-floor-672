@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/cult.css"/>
+    <!-- <link rel="stylesheet" href="styles/gear_navbar.css"/> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/icon type">
+    <title>Logged In || Cure Fit</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="scripts/curefitOnlinePT.js"></script>
+    <script type="text/javascript" src="/scripts/login.js"></script>
+<!-- <link rel="stylesheet" href="/styles/item.css"> -->
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/fa/css/font-awesome.min.css" />
+
+    <style>
+      
+    .item {
+  visibility: hidden;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fd306b;
+  bottom: 60%;
+  right: 12%;
+  padding: 1%;
+  color: white;
+  border-radius: 100%;
+}
+
+    </style>
+</head>
+<body onload="checkCartValue()">
+    <div class=nav__bar>
+        <div class=logo__box>
+            <div class=logo__img__section>
+                <div class=logo>
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg"></img>
+                </div>
+                <div class=logo__name>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cultfit.svg"></img>
+                </div>
+                <button type="submit" style="cursor: pointer; background-color: white; border: none" ><i class="fa fa-chevron-down" aria-hidden="true"></i></button >
+            </div>
+            <div class="link__section">
+                <ul class=nav__links>
+                    <li><a href="/pages/loggedIn.html" tabindex="1">Cult Centers</a></li>
+                    <li><a href="/pages/curefitOnlinePT.html" tabindex="1">Online PT</a></li>
+                    <li><a href="/pages/gear.html" tabindex="1">Cultsport</a></li>
+                </ul>
+            </div>
+            <div class=login__section>
+                <i class="fa fa-circle" aria-hidden="true" style="color:cyan; font-size: 10px;"></i>
+                <button type="submit" style="cursor: pointer">Mumbai</button>
+                <span><img src="https://static.cure.fit/assets/images/user-image.svg"/></span>
+                <button id="login__btn" onclick=dropdown()><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button type="submit" style="cursor: pointer" onclick="window.location.href= '/pages/cart.html'"><img src="https://static.cure.fit/assets/images/cart-image.svg"/><div class="item" id="item">1</div></button>
+                <div id="dropdown__content" class="dropdown__content">
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/profile-icon.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/profile.html">Profile</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/cart-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/orders.html">orders</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/health-profile-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/medicalRecords.html">medical Records</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/combined-shape-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/pages/packs.html">Active Packs</a>
+                      </div>   
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                        <img src="https://static.cure.fit/assets/images/coupon-black.svg"/>
+                      </div>
+                      <div>
+                          <a  href="/pages/redeem.html">Redeem Voucher</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div><i class="fa fa-cog" aria-hidden="true"></i></div>
+                      <div><a href="/pages/account.html" >Account</a></div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div><img src="https://static.cure.fit/assets/images/support-black.svg"/></div>
+                      <div>
+                          <a href="/pages/support.html">Support</a>
+                      </div>
+                  </div>
+                  <div class="dropdown__block">
+                      <div>
+                          <img src="https://static.cure.fit/assets/images/logout-black.svg"/>
+                      </div>
+                      <div>
+                          <a href="/index.html">Logout</a>
+                      </div> 
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/51a46bc2-3fec-4ea0-b25e-a2488436d06d.png"></img>
+    </div>
+    <div class="clock__container">
+      <div class="clock">
+        <div></div>
+        <h3 id='limitedoffer'></h3>
+        <h3 style="color:grey" id="limitedoffervalue">Hr Min Sec</h3>
+      </div>
+      
+    </div>
+    <div class= "voucher__section">
+        <h3>Two Free Trials</h3>
+        <p style="color: grey; font-size: 12px;">Experience cult classes for free</p>
+        <div class="voucher__container">
+          <div class="voucher">
+            <h1 style="color: white;">01</h1>
+            <button>Book Now</button>
+            <div class="circle__white"></div>
+            <div class="circle__white__right"></div>
+        </div>
+        <div class="voucher">
+            <h1 style="color: white;">02</h1>
+            <button>Book Now</button>
+            <div class="circle__white"></div>
+            <div class="circle__white__right"></div>
+        </div>
+      </div>
+    </div>
+    <div class='membership'>
+      <div class='opt'>
+        <div class='opttxt1'>
+          <h2>Unlimited access to all Cult centers</h2>
+        </div>
+        <div class='opttxt2'>
+          <p>MEMBERSHIP</p>
+        </div>
+        <div class='opttxt3'>
+          <div class='line'></div>
+          <h3>ENJOY THE BENEFITS OF</h3>
+          <div class='line'></div>
+        </div>
+      </div>
+      <div class='workout'>
+          <div class='workoutIconbox'>
+              <p><strong>ALL</strong> Center Access</p>
+          </div>
+          <div class='workoutIconbox'>
+            <p><strong style="font-size: 40px">&#8734;</strong> </p>
+              <p>Classes</p>
+          </div>
+          <div class='workoutIconbox'>
+              <p><strong">FREE</strong> Membership Pauses</p>
+          </div>
+      </div>
+      <div class='subscription'>
+          <h5>Choose Your Subscription</h5>
+      </div>
+      <div class='subscriptionbox'>
+          <div class='subscriptionlist'>
+              <div class='sub1'>
+                  <div class='subrate'>
+                      <p>100 sessions</p>
+                      <div class="price">
+                          <p class="discount">₹ 29990 </p>
+                          <p>₹ 20990 </p>
+                      </div>
+                      
+                  </div>
+                  <div class="buy">
+                      <p>BUY</p>
+                  </div>
+              </div>
+              <div class='sub1'>
+                  <div class='subrate'>
+                      <p>50 sessions</p>
+                      <div class="price">
+                          <p class="discount">₹ 23999 </p>
+                          <p>₹ 12990 </p>
+                      </div>                    
+                  </div>
+                  <div class="buy">
+                      <p>BUY</p>
+                  </div>
+              </div>
+              <div class='sub1'>
+                  <div class='subrate'>
+                      <p>20 sessions</p>
+                      <div class="price">
+                          <p class="discount">₹ 12990 </p>
+                          <p>₹ 6990 </p>
+                      </div>
+                  </div>
+                  <div class="buy">
+                      <p>BUY</p>
+                  </div>
+              </div>
+          </div>
+          <div class="instedDiscount">
+              <div class="instentondebit">
+                  <p>Get Free 1 month extension</p>
+              </div>
+              <div class="instentondebit">
+                  <p>Get Free 1 month extension</p>
+              </div>
+              <div class="instentondebit">
+                  <p>Get Free 1 month extension</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="video__section">
+        <h3>Watch Our Safety Measures</h3>
+        <div>
+           <a href="https://s3.ap-south-1.amazonaws.com/curefit-content/video/vm/2bba5fdd-0527-4d73-b694-e4edffcb41da.mp4"> <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440,ar_2880:595/dpr_2/image/vm/f16a1d26-4c36-4b0d-b743-0d79da633956.jpg"/></a>
+        </div>
+    </div>
+    </div>
+    <div class="workout__section">
+      <h4>WORKOUTS</h4>
+      <div class="workout__cards">
+        <div class="img__cards">
+          <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/1_id/PRODUCT_BNR_2020-02-04T13:19:29.014Z.png"/>
+          <div class="work__tag">
+            <h4>Yoga</h4>
+          </div>
+        </div>
+        <div class="img__cards">
+          <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/4_id/PRODUCT_BNR_2020-07-21T18:32:59.441Z.png"/>
+          <div class="work__tag">
+            <h4>Boxing</h4>
+          </div>
+        </div>
+        <div class="img__cards">
+          <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/84_id/PRODUCT_BNR_2020-02-04T13:04:53.343Z.png"/>
+          <div class="work__tag">
+            <h4>Dance Fitness</h4>
+          </div>
+        </div>
+        <div class="img__cards">
+          <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/5_id/PRODUCT_BNR_2020-02-04T13:17:06.754Z.png"/>
+          <div class="work__tag">
+            <h4>S & C</h4>
+          </div>
+        </div>
+        <div class="img__cards">
+          <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_485,ar_485:323,c_fit/dpr_2/v1/cult-media/v2web/workouts/22_id/PRODUCT_BNR_2020-03-04T11:36:46.263Z.png"/>
+          <div class="work__tag">
+            <h4>HRX Workout</h4>
+          </div>
+        </div>
+      </div>
+      <h4>Quick Links</h4>
+      <h5>Support<hr/></h5>
+      <h5>Terms & Conditions<hr/></h5>
+    </div>
+    <div class="quote__section">
+      <p class="larger__text">BE SPIRITED</p>
+      <p class="larger__text">FEARLESS</p>
+      <p class="large__text">AN EVERYDAY ATHLETE</p>
+    </div>
+      <div class="app__FAQ">
+        <div class="app__FAQ__top">
+          <div class="FAQ__top__left">
+            <h1>FAQS</h1>
+            <h3>7 QUESTIONS</h3>
+          </div>
+          <div class="FAQ__top_right">
+            <h4 style="color: #ff3278">SEE ALL</h4>
+          </div>
+        </div>
+        <div class="app__FAQ__bottom">
+          <button class="accordion">
+            <li>What is cultsport and what does it offer?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+          <button class="accordion">
+            <li>What makes cultsport special?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+          <button class="accordion">
+            <li>How do I track my cultsport order?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+          <button class="accordion">
+            <li>How do I cancel my cultsport Order?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+          <button class="accordion">
+            <li>
+              I am not satisfied with my cultsport product. Can I return or
+              exchange it?
+            </li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr>
+          <button class="accordion">
+            <li>How can I pay for my cultsport order?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+          <button class="accordion">
+            <li>How can I contact the delivery guy?</li>
+          </button>
+          <div class="panel">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Do you find this helpful? &nbsp; &nbsp;<em style="color:#ff3278 ; font-style: normal;">Yes</em>&nbsp;&nbsp; <em style="color:#ff3278 ; font-style: normal;">No</em> </p>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+      <div class="tiny__faq">
+        <div class="tiny__block">
+          <h6>Which Are The Best Gyms Near Me?</h6>
+          <p>Cult.fit has gyms in various locations around the nation. It established its first center in South Bangalore and now has spread over to more than 130 locations in India. It has its centers in Bangalore, 
+            Hyderabad, Delhi, Mumbai, etc. Find the nearest gym by searching for the best gym near me, choose the cult.fit the gym nearby, and experience the magic. If the cult.fit center is not close to you, You can 
+            also go for the Workout from Home option and experience its wonder. Whether you are a resident of Delhi, or Mumbai, cult.fit has covered all. Here are some places, you will find the centers: Bangalore: You 
+            will find many cult.fit centers in Bangalore like in Jp Nagar, Bellandur, RR Nagar, Electronic city. Banashankari, Malleswaram, and 14 more locations. You will get more new locations at Yelahanka, Hennur, and
+             4 more other places in Bangalore soon. Search for the good gyms near me and you will find it. Delhi: If you are staying in Delhi, you can find the centers around Model Town, Pitampura, Ring Road, Dwarka Sector 12,
+              Hauz Khas, and some more spread out. You can search cult gyms around me and you will get a list of centers around you. Hyderabad: If you are based out of Hyderabad, You can opt for the workouts in Himayatnagar, 
+              Banjara Hills, Nizampet x roads, Jubilee Hills, LB Nagar, and some more areas. Mumbai: You will find some centers around Mumbai in palladium, Andheri, Lokhandwala, Tardeo, and Juhu soon. If you are in Chennai, Jaipur, Visakhapatnam, 
+            Kanpur, Ludhiana, Bhopal, Mangalore, find your way to Cult.fit fitness. Just find the Top gyms near me and you will find it on the list. So, Don’t wait, search for good gyms near me and opt for a different world of workouts.</p>
+        </div>
+        <div class="tiny__block">
+          <h6>What facilities are available at the Gyms?</h6>
+          <p>The Cult.fit gyms are specially designed to make your workout fun and easy. 
+            The gyms near my location are stuffed with all kinds of training equipment required. 
+            There are various facilities available in all cult.fit gyms like: Shower facility, Locker rooms, Towels, Drinking-Water Bottles, Training equipment. </p>
+        </div>
+        <div class="tiny__block">
+          <h6>What type of Workout is available at the Gyms?</h6>
+          <p>
+            The gyms at cult.fit are the best gyms that come under fitness studios. You can search for the best gym near me and choose the center to book your sessions with a click. In the gym centers of Cult.fit, you will find various types of workouts that will give you a balanced mix of workouts to enhance your health like: Boxing: To enhance cardiovascular strength, improve your boxing techniques. You can search for Boxing at the gym near me and you will get the answer. Dance & Fitness: Cult.fit also provides Dance and Fitness workouts sessions for its users to keep the overall body fit, reduce weight, and maintain flexibility. Search for the Best gyms around me and pick the cult center for the workouts. Strength & Conditioning (S&C): Cult.fit gyms are one of the best gyms to give you the training sessions for Strength and Conditioning workouts. HRX Workout: HRX Workout is a collection of substance and style with inspiration from the legend Hrithik Roshan. You can search for the gym near me and see the list of the cult.fit centers that give you HRX workouts. Yoga: Cult centers also provide the Yoga training with proper techniques of Breathing and asanas, to increase its effectiveness. The beauty of the workouts is that it can be done by anyone. The beginners can learn from the basic moves while the athletes can brush up their skills and strength. You can choose from the workouts according to your needs and desired results. You can search for any groups like the Best gym near me.
+          </p>
+        </div>
+        <div class="tiny__block">
+          <h6>What are the Benefits of going to the Gym?</h6>
+          <p>
+            Doing exercise is always best. Going to the gym is the start of doing exercise. So, technically, There are a lot of benefits of going to the gym. Some of them that you can experience are: Working out will reduce the chances of illness like Heart diseases, High Blood pressure, Diabetes, etc. You will feel good not only physically but also mentally as the exercise works on the physical body as well as on your mental health. By going out to the nearby gym, you can get trained by our health professionals and instructors. They will help you to exercise correctly and effectively. Gyms have all the machines required for the exercises. So, head out for the gyms for all the training with the best machines to work on every part of your body. You can get motivated either from the trainer or from your fellow mates in the training. With the proper motivation, all the goals can be attained with ease and quickly. When you workout at your home, you will get the benefit of exercising, but the chances are you might excuse yourself for not doing exercise at some point or another. But, if you are choosing the gym, you will be accountable for your health and exercise. Going to the gym will help you feel much better, as it helps in stress relief, reduces the anxiety level, and even helps you in improving your sleep quality. The gyms of cult.fit are designed to provide you with a non-conventional Training facility. Each Training provided works to improve your health mixing with a lot of fun. The gyms offer all-around development on the body be it flexibility, Strength, or endurance capacity.
+          </p>
+        </div>
+        <div class="tiny__block">
+          <h6>How often should you go to the gym?</h6>
+          <p>
+            The number of days you go out to the gym in a week depends on goals. For a general rule, 3-5 days a week is the ideal way to work-out. It is important to take rests between workouts as the constant workouts cause wear and tear in the body. The rest days will help the body recover from the tear and will eliminate the chances of chronic fatigue. While doing exercises is necessary, taking breaks is also necessary. There are some general guidelines on how many days you need to work out: If you want to lose weight - 5-6 days of Workout followed by rest days. If your concern is general fitness - 4-5 days per week will be ideal. Building muscles - 3-4 days per week will be best. It is very important to stick to the schedule and not miss workouts for achieving the desired results. Also, consult the trainer once for the goals and number of days you have to workout for better knowledge and personalized feedback.
+          </p>
+        </div>
+        <div class="tiny__block">
+          <h6>Things You Should Carry to Gym?</h6>
+          <p>
+            There are some useful belongings that you should always carry while going to the gym. Some of them include: Shorts: Choose good shorts that absorb the moisture and provide comfort while working out. T-shirt: Choose a proper fitting T-shirt of breathable and soft fabric to soak up all the sweat. Sipper/Water Bottle: To keep you hydrated between and after the workout sessions. Sports Bra: If you are a woman, Choose a good Sports Bra for the workout. Sports Bra provides extra support to the breasts at the time of workouts. Napkin: To wipe away the excess sweats. Cotton or Microfiber towels work best as it's an excellent absorbent. Sweatbands: The sweatbands help to soak up the sweat and keep the hair away from the face during a workout. Socks: Don’t forget to take up the socks as working out without socks can be very painful. So keeping a sock handy is very essential. Shoes: Shoes are the essentials for the workouts. Wearing shoes while working out makes the workout easy and prevents the toe from getting hurt. Smartwatch: You can use a smartwatch while working out. It can track your heart rate as well as the calories burnt during the workout. Although it is not compulsory to have a watch, it is an added benefit if you have it. Gym Bag: Gym bag that you carry should be appropriate. Neither too small nor too big. It should be able to keep all the essentials. Other essentials: There are other essentials that you might keep like the refreshing facial wipes, or sanitizers if you want to. You can also pick your gym essentials from the cult sport.
+          </p>
+        </div>
+        <div class="tiny__block">
+          <h6>Will I get a personal trainer with my membership?</h6>
+          <p> 
+            Yes. With every membership, you will get a personal trainer for the workouts. If you choose to workout with groups, the trainer will be assigned to the whole of the group. All the trainers in the cult are trained with perfection to provide you the correct training with effectiveness.
+          </p>
+        </div>
+        <div class="tiny__block">
+          <h6>What is the membership fee for gyms?</h6>
+          <p>
+            There are 3 kinds of membership plans for the cult.fit classes: Unlimited packs: The packs that you can use at any gym centers of cult.fit. It has a 12 months plan(₹17,490), 6 months plan(₹14,990) and 3 months plan (₹ 9,990) Buddy pack: You can take your buddy along with you to the cult.fit centers and take a 3-months Buddy pack with just ₹ 25,100. Cult Select Pack(Available only in India): It is available for only selected centers which give you access to any Cult center that you choose at the time of purchase. Different centers have different amounts of subscriptions. You can search Cult Gyms near my location and you can see the gyms nearby and select from them. Monthly Subscription(Available only in India): You can also choose to opt for a monthly subscription providing unlimited classes anytime. Select the gym cult Top gyms near me and you will see a list of the cult gyms you can choose from the gyms nearby. Choose the membership plan and enjoy the variety of workout formats and unlimited Membership pause in all centers in your city.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer__top">
+            <div class="footer__top__section1">
+                <div class="footer__logo">
+                    <img src="https://static.cure.fit/assets/images/cf-logo.svg"></img>
+                </div> 
+                <div class="footer__top__para">
+                    <p>At cure.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation,
+                         and medical & lifestyle care hassle-free. #BeBetterEveryDay</p>
+                </div>  
+            </div>
+            <div>
+                <ul class="footer__top__list">
+                    <li>CONTACT US</li>
+                    <li>BLOG</li>
+                    <li>CULT FRANCHISE</li>
+                    <li>PARTNER.FIT</li>
+                    <li>TALKS</li>
+                    <li>CAREERS</li>
+                </ul>
+            </div>
+            <div class="app__store__container">
+                <div class="app__store">
+                    <img src="https://static.cure.fit/assets/images/app-store.svg" alt="app store icon">
+                </div>
+                <div class="app__store">
+                    <img src="https://static.cure.fit/assets/images/play-store.svg" alt="google play icon">
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <h4>RELATED SEARCH<hr/></h4>
+            
+            <div class="footer__bottom__lists">
+                <ul class="list1">
+                    <li><a>Gyms Near Me</a></li>
+                    <li><a>Yoga for Back Pain</a></li>
+                    <li><a>Chest Workouts for Men</a></li>
+                    <li><a>Weight Loss Workout</a></li>
+                    <li><a>Yoga Poses for Weight Loss</a></li>
+                    <li><a>Spine Exercises</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Online Personal Training</a></li>
+                    <li><a>Thigh Exercises</a></li>
+                    <li><a>Upper Body Workout</a></li>
+                    <li><a>Yoga For Flexibility</a></li>
+                    <li><a>Yoga Poses for Beginners</a></li>
+                    <li><a>Surya Namaskar for Beginners</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Reduce Belly Fat</a></li>
+                    <li><a>Fat Burning Exercises</a></li>
+                    <li><a>Chest Exercises at Home</a></li>
+                    <li><a>Core Strengthening Exercises</a></li>
+                    <li><a>Chest Workouts for Women</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Dance Fitness</a></li>
+                    <li><a>Tummy Exercises</a></li>
+                    <li><a>HRX Workout</a></li>
+                    <li><a>Exercise for Kids</a></li>
+                    <li><a>Bodyweight Squats</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>Cardio Exercisee</a></li>
+                    <li><a>Arms Workout</a></li>
+                    <li><a>Six Pack Workout</a></li>
+                    <li><a>Lower Chest Workout</a></li>
+                    <li><a>Exercise to Increase Stamina</a></li>
+                </ul>
+                <ul class="list1">
+                    <li><a>HIIT Workout</a></li>
+                    <li><a>Lower Back Exercises</a></li>
+                    <li><a>Yoga Postures for Beginners</a></li>
+                    <li><a>Upper Chest Workout</a></li>
+                    <li><a>Oblique Workouts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom__links">
+            <div class="bottom__links__link"> 
+                <a>Contact Us</a>
+                <a>FAQ</a>
+                <a>Terms & Condition</a>
+                <a>Privacy Policy</a>
+                <a>Refund Policy</a>
+            </div>
+            <div class="bottom__links__logo">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/scripts/curefitOnlinePT.js"></script>
+<script src="/scripts/cult.js"></script>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = "200px";
+      }
+    });
+  }
+</script>
+<script src="/scripts/cult.js"></script>
+<script src="/scripts/item.js"></script>
+</html>

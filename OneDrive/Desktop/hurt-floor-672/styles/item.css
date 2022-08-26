@@ -1,0 +1,12 @@
+.item {
+    visibility: hidden;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fd306b;
+    bottom: 65%;
+    right: 10%;
+    padding: 1%;
+    color: white;
+    border-radius: 100%;
+  }

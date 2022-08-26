@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.container__left__icon > h4 > a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background-color:white;
+}
+.app__banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__heroBanner {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+  height:50%;
+}
+
+.app__heroBanner img {
+  width: 150%;
+}
+.app__banner {
+  width: 90%;
+  margin: 5% auto;
+}
+
+.app__banner__first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app__banner__first > a {
+  text-decoration: none;
+}
+
+.app__banner__cards {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1%;
+}
+.card {
+  cursor: pointer;
+}
+
+
+.card > h4,
+.card > h5 {
+  margin-bottom: 0;
+  margin: 5px;
+}
+.card > h4 {
+  margin-top: 10px;
+}
+.app__banner__cards__pricing {
+  margin: 5px;
+}
+.card > img {
+  width: 95%;
+}
+
+.app__banner__cards__pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.app__banner__cards__pricing > * {
+  /* border: 1px solid red; */
+  margin-right: 0.5em;
+}
+
+.app__lower__one,
+.app__lower__two {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.app__lower__one {
+  margin-top: 1em;
+  font-size: 60px;
+}
+
+.app__FAQ {
+  background:grey;
+  margin-top: 5%;
+  padding: 5%;
+}
+
+.FAQ__top__left > h1,
+.FAQ__top__left > h3 {
+  margin: 8px;
+}
+.FAQ__top__left > h3 {
+  color: #6a6a6a;
+  font-weight: normal;
+}
+.app__FAQ__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__FAQ__bottom {
+  margin: 5%;
+}
+.accordion {
+  font-family: "Nunito", sans-serif, "FontAwesome";
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  border-bottom: 1px solid;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  background-color: black;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 18px;
+  background-color: transparent;
+  max-height: 0px;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  /* font-family: "FontAwesome"; */
+  content: "\f078";
+  color:black;
+  font-weight: bold;
+  color: #ff3278;
+  margin-left: 5px;
+  transition: 1s;
+}
+
+.active:after {
+  /* font-family: "FontAwesome"; */
+  content: "\f077";
+  color: #ff3278;
+  height: auto;
+  transition: 1s;
+}
+
+.panel > p {
+  width: 90%;
+  text-align: justify;
+  margin: 20px;
+}
+hr {
+  border-color: transparent;
+  border-top: 0.5px solid rgb(231, 231, 231);
+  background-color: transparent;
+}
