@@ -270,6 +270,7 @@ body {
   flex-basis: 25%;
   justify-content: space-between;
   text-align: center;
+  
 }
 #convenience{
   height: 30px;
@@ -297,7 +298,7 @@ body {
   margin-top: 0%;
 }
 
-#customerspeak{
+/* #customerspeak{
   width: 90%;
   margin-left: 5%;
 }
@@ -332,7 +333,7 @@ justify-content: space-between;
   word-spacing: 2px;
   line-height: 200%;
   justify-content: space-between;
-}
+} */
 
 .app__FAQ {
   background: #f2f4f8;
