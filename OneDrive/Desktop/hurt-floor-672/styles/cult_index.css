@@ -510,8 +510,8 @@ voucher ends */
 }
 .img__cards {
   margin: 2% auto;
-  height: 400px;
-  width: 450px;
+  height: 150px;
+  width: 250px;
   border-radius: 10px;
   overflow: hidden;
   margin-right: auto;
@@ -530,14 +530,13 @@ voucher ends */
   width: 65%;
   margin: 5% auto;
   line-height: 2%;
-  
 }
 .larger__text {
-  font-size: 15px;
-  font-weight: 70px;
+  font-size: 50px;
+  font-weight: 700;
 }
 .large__text {
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 700;
   color: #6a6a6a;
 }
@@ -546,12 +545,11 @@ voucher ends */
 .tiny__faq {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 70%;
   margin: auto;
-  background-color:grey
 }
 .tiny__block h6 {
-  font-size: 25px;
+  font-size: 11px;
   margin-bottom: -1%;
 }
 .tiny__block {
@@ -561,3 +559,4 @@ voucher ends */
   /* height: 280px; */
   text-align: justify;
 }
+/* tiny faq */
