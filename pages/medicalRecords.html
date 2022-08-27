@@ -2,44 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/orders.css" />
-    <link rel="stylesheet" href="/styles/care_navbar.css" />
+    <link rel="stylesheet" href="/styles/gear_navbar.css" />
 <link rel="stylesheet" href="/styles/item.css">
-    <link rel="stylesheet" href="/styles/account.css"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Orders</title>
   </head>
   <body onload="fetchValues()">
     <div class=nav__bar>
-      <div class=logo__box>
-          <div class=logo__img__section>
-              <div class=logo>
-                  <img src="https://static.cure.fit/assets/images/curefit-v-man.svg"></img>
-              </div>
-              <!-- <div class=logo__name>
-                  <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cultfit.svg"></img>
-              </div>
-              <button type="submit" style="cursor: pointer; background-color: white; border: none" ><i class="fa fa-chevron-down" aria-hidden="true"></i></button > -->
-          </div>
-          <div class="link__section">
-            <ul class=nav__links>
-              <li><a tabindex="1"><img style="width: 20px;" src="https://static.cure.fit/assets/images/Livefit.svg"/><div>LIVE</div></a></li>
-              <li><a tabindex="1"  onclick="window.location.href='/pages/loggedIn.html'"><img  style="width: 20px;" src="https://static.cure.fit/assets/images/cult-icon.svg"/><div>CULT</div></a></li>
-              <li><a tabindex="1"><img style="width: 20px;" src="https://static.cure.fit/assets/images/mind-icon.svg"/><div>MIND</div></a></li>
-              <li><a tabindex="1" onclick="window.location.href='/pages/medicalRecords.html'"><img style="width: 20px;" src="https://static.cure.fit/assets/images/carefit-blk.svg"/><div>CARE</div></a></li>
-              <li ><a tabindex="1" onclick="window.location.href='/pages/gear.html'"><img style="width: 20px;" src="https://static.cure.fit/assets/images/store-icon.svg"/><div  >STORE</div></a></li>
-            </ul>
-        </div>
+        <div class=logo__box>
+            <div class=logo__img__section>
+                <div class=logo>
+                    <img src="https://static.cure.fit/assets/images/curefit-v-man.svg"></img>
+                </div>
+                <!-- <div class=logo__name>
+                    <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/header-web/cultfit.svg"></img>
+                </div>
+                <button type="submit" style="cursor: pointer; background-color: white; border: none" ><i class="fa fa-chevron-down" aria-hidden="true"></i></button > -->
+            </div>
+            <div class="link__section">
+              <ul class=nav__links>
+                <li><a tabindex="1"><img style="width: 20px;" src="https://static.cure.fit/assets/images/Livefit.svg"/><div>LIVE</div></a></li>
+                <li><a tabindex="1"  onclick="window.location.href='/pages/loggedIn.html'"><img  style="width: 20px;" src="https://static.cure.fit/assets/images/cult-icon.svg"/><div>CULT</div></a></li>
+                <li><a tabindex="1"><img style="width: 20px;" src="https://static.cure.fit/assets/images/mind-icon.svg"/><div>MIND</div></a></li>
+                <li><a tabindex="1" onclick="window.location.href='/pages/medicalRecords.html'"><img style="width: 20px;" src="https://static.cure.fit/assets/images/carefit-blk.svg"/><div>CARE</div></a></li>
+                <li ><a tabindex="1" onclick="window.location.href='/pages/gear.html'"><img style="width: 20px;" src="https://static.cure.fit/assets/images/store-icon.svg"/><div  >STORE</div></a></li>
+              </ul>
+            </div>
           <div class=login__section>
-            <i class="fa fa-circle" aria-hidden="true" style="color:cyan; font-size: 10px;"></i>
-            <button type="submit" style="cursor: pointer">Mumbai</button>
-            <span><img src="https://static.cure.fit/assets/images/user-image.svg"/></span>
-            <button id="login__btn" onclick=dropdown()><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
-            <button type="submit" style="cursor: pointer" onclick="window.location.href= '/pages/cart.html'"><img src="https://static.cure.fit/assets/images/cart-image.svg"/><div class="item" id="item">1</div></button>
-            <div id="dropdown__content" class="dropdown__content">
+              <i class="fa fa-circle" aria-hidden="true" style="color:cyan; font-size: 10px;"></i>
+              <button type="submit" style="cursor: pointer">Mumbai</button>
+              <span><img src="https://static.cure.fit/assets/images/user-image.svg"/></span>
+              <button id="login__btn" onclick=dropdown()><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+              <button type="submit" style="cursor: pointer" onclick="window.location.href= '/pages/cart.html'"><img src="https://static.cure.fit/assets/images/cart-image.svg"/><div class="item" id="item">1</div></button>
+              <div id="dropdown__content" class="dropdown__content">
                 <div class="dropdown__block">
                     <div>
                         <img src="https://static.cure.fit/assets/images/profile-icon.svg"/>
@@ -77,7 +76,7 @@
                       <img src="https://static.cure.fit/assets/images/coupon-black.svg"/>
                     </div>
                     <div>
-                        <a  href="/pages/red.html">Redeem Voucher</a>
+                        <a  href="/pages/redeem.html">Redeem Voucher</a>
                     </div>
                 </div>
                 <div class="dropdown__block">
@@ -99,7 +98,7 @@
                     </div> 
                 </div>
             </div>
-        </div>
+          </div>
       </div>
   </div>
     <div class="container">
@@ -127,11 +126,18 @@
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDAyNiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTE2NC45NjA5MzggMzAwLjAwMzkwNmguMDIzNDM3Yy4wMTk1MzEgMCAuMDM5MDYzLS4wMDM5MDYuMDU4NTk0LS4wMDM5MDZoMjcxLjk1NzAzMWM2LjY5NTMxMiAwIDEyLjU4MjAzMS00LjQ0MTQwNiAxNC40MjE4NzUtMTAuODc4OTA2bDYwLTIxMGMxLjI5Mjk2OS00LjUyNzM0NC4zODY3MTktOS4zOTQ1MzItMi40NDUzMTMtMTMuMTUyMzQ0LTIuODM1OTM3LTMuNzU3ODEyLTcuMjY5NTMxLTUuOTY4NzUtMTEuOTc2NTYyLTUuOTY4NzVoLTM2Ni42MzI4MTJsLTEwLjcyMjY1Ny00OC4yNTM5MDZjLTEuNTI3MzQzLTYuODYzMjgyLTcuNjEzMjgxLTExLjc0NjA5NC0xNC42NDQ1MzEtMTEuNzQ2MDk0aC05MGMtOC4yODUxNTYgMC0xNSA2LjcxNDg0NC0xNSAxNXM2LjcxNDg0NCAxNSAxNSAxNWg3Ny45Njg3NWMxLjg5ODQzOCA4LjU1MDc4MSA1MS4zMTI1IDIzMC45MTc5NjkgNTQuMTU2MjUgMjQzLjcxMDkzOC0xNS45NDE0MDYgNi45Mjk2ODctMjcuMTI1IDIyLjgyNDIxOC0yNy4xMjUgNDEuMjg5MDYyIDAgMjQuODEyNSAyMC4xODc1IDQ1IDQ1IDQ1aDI3MmM4LjI4NTE1NiAwIDE1LTYuNzE0ODQ0IDE1LTE1cy02LjcxNDg0NC0xNS0xNS0xNWgtMjcyYy04LjI2OTUzMSAwLTE1LTYuNzMwNDY5LTE1LTE1IDAtOC4yNTc4MTIgNi43MDcwMzEtMTQuOTc2NTYyIDE0Ljk2MDkzOC0xNC45OTYwOTR6bTMxMi4xNTIzNDMtMjEwLjAwMzkwNi01MS40Mjk2ODcgMTgwaC0yNDguNjUyMzQ0bC00MC0xODB6bTAgMCIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTE1MCA0MDVjMCAyNC44MTI1IDIwLjE4NzUgNDUgNDUgNDVzNDUtMjAuMTg3NSA0NS00NS0yMC4xODc1LTQ1LTQ1LTQ1LTQ1IDIwLjE4NzUtNDUgNDV6bTQ1LTE1YzguMjY5NTMxIDAgMTUgNi43MzA0NjkgMTUgMTVzLTYuNzMwNDY5IDE1LTE1IDE1LTE1LTYuNzMwNDY5LTE1LTE1IDYuNzMwNDY5LTE1IDE1LTE1em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0zNjIgNDA1YzAgMjQuODEyNSAyMC4xODc1IDQ1IDQ1IDQ1czQ1LTIwLjE4NzUgNDUtNDUtMjAuMTg3NS00NS00NS00NS00NSAyMC4xODc1LTQ1IDQ1em00NS0xNWM4LjI2OTUzMSAwIDE1IDYuNzMwNDY5IDE1IDE1cy02LjczMDQ2OSAxNS0xNSAxNS0xNS02LjczMDQ2OS0xNS0xNSA2LjczMDQ2OS0xNSAxNS0xNXptMCAwIiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
           />
         </div>
-        <div class="container__left__icon">
-          <h4><a href="/pages/medicalRecords.html" tabindex="1">Medical Records</a></h4>
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTUxMS44MzYsMjYwLjA0M2wtNDEuMjcxLDAuMjI1bDIuNTc4LTIuNjIxYzUwLjg5Ni01MC45NDcsNTAuODgyLTEzMy44MDMtMC4wNDYtMTg0LjczICAgIGMtNTAuOTQyLTUwLjk0My0xMzMuODMzLTUwLjk0NC0xODQuNzc2LDBsLTMyLjM2MSwzMi4zNjNsLTMyLjM2Mi0zMi4zNjJjLTUwLjk0Mi01MC45NDMtMTMzLjgzMy01MC45NDMtMTg0Ljc3NiwwICAgIEMtMTIuMTIzLDEyMy44Ni0xMi4xMjIsMjA2Ljc1LDM4Ljc4OCwyNTcuNjZsOS40NzQsOS41MzJIMHYyOS45OTVoNzguMDY4bDE3OC45NzksMTgwLjEwM2wxODMuODQ3LTE4Ni44NjVMNTEyLDI5MC4wMzggICAgTDUxMS44MzYsMjYwLjA0M3ogTTI1Ni45NDEsNDM0LjYzTDEyMC4zNTYsMjk3LjE4OGg2NS4xNjNMMjEzLjcsMjI5LjQzbDQyLjg4MSwxMzUuMjI4bDYyLjIxOC05NS40OThsMTYuNDUzLDIxLjg0MWw2My4zMzctMC4zNDYgICAgTDI1Ni45NDEsNDM0LjYzeiBNNDI4LjI1OSwyNjAuNDk5bC03OC4xMTIsMC40MjdsLTMzLjEzMS00My45NzhsLTUwLjk5MSw3OC4yNjZMMjE3LjUsMTQyLjE4NWwtNTEuOTkzLDEyNS4wMDhoLTc0Ljk2ICAgIEw2MC4wMywyMzYuNDgzYy0xOS4wMTItMTkuMDEzLTI5LjQ4Mi00NC4yOTEtMjkuNDgyLTcxLjE3OGMwLTI2Ljg4OSwxMC40Ny01Mi4xNjcsMjkuNDgzLTcxLjE3OSAgICBjMTkuMDEzLTE5LjAxMiw0NC4yOTEtMjkuNDgyLDcxLjE3OC0yOS40ODJjMjYuODg4LDAsNTIuMTY2LDEwLjQ3LDcxLjE3OSwyOS40ODJsNTMuNTcxLDUzLjU3MWw1My41NzEtNTMuNTcxICAgIGMxOS4wMTMtMTkuMDEzLDQ0LjI5MS0yOS40ODIsNzEuMTc4LTI5LjQ4MmMyNi44ODksMCw1Mi4xNjcsMTAuNDcsNzEuMTc5LDI5LjQ4MmMxOS4wMTIsMTkuMDEyLDI5LjQ4Miw0NC4yOTEsMjkuNDgyLDcxLjE3OSAgICBzLTEwLjQ3LDUyLjE2Ni0yOS40ODIsNzEuMTc4TDQyOC4yNTksMjYwLjQ5OXoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+"
-          />
+        <div class="container__left__icon1">
+          <button onclick="myFunction()" class="dropbtnmedical" id="dropbtnmedical" style="border-right: #ff3278 4px solid;">
+            <h4><a tabindex="1">Medical Records</a></h4>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTUxMS44MzYsMjYwLjA0M2wtNDEuMjcxLDAuMjI1bDIuNTc4LTIuNjIxYzUwLjg5Ni01MC45NDcsNTAuODgyLTEzMy44MDMtMC4wNDYtMTg0LjczICAgIGMtNTAuOTQyLTUwLjk0My0xMzMuODMzLTUwLjk0NC0xODQuNzc2LDBsLTMyLjM2MSwzMi4zNjNsLTMyLjM2Mi0zMi4zNjJjLTUwLjk0Mi01MC45NDMtMTMzLjgzMy01MC45NDMtMTg0Ljc3NiwwICAgIEMtMTIuMTIzLDEyMy44Ni0xMi4xMjIsMjA2Ljc1LDM4Ljc4OCwyNTcuNjZsOS40NzQsOS41MzJIMHYyOS45OTVoNzguMDY4bDE3OC45NzksMTgwLjEwM2wxODMuODQ3LTE4Ni44NjVMNTEyLDI5MC4wMzggICAgTDUxMS44MzYsMjYwLjA0M3ogTTI1Ni45NDEsNDM0LjYzTDEyMC4zNTYsMjk3LjE4OGg2NS4xNjNMMjEzLjcsMjI5LjQzbDQyLjg4MSwxMzUuMjI4bDYyLjIxOC05NS40OThsMTYuNDUzLDIxLjg0MWw2My4zMzctMC4zNDYgICAgTDI1Ni45NDEsNDM0LjYzeiBNNDI4LjI1OSwyNjAuNDk5bC03OC4xMTIsMC40MjdsLTMzLjEzMS00My45NzhsLTUwLjk5MSw3OC4yNjZMMjE3LjUsMTQyLjE4NWwtNTEuOTkzLDEyNS4wMDhoLTc0Ljk2ICAgIEw2MC4wMywyMzYuNDgzYy0xOS4wMTItMTkuMDEzLTI5LjQ4Mi00NC4yOTEtMjkuNDgyLTcxLjE3OGMwLTI2Ljg4OSwxMC40Ny01Mi4xNjcsMjkuNDgzLTcxLjE3OSAgICBjMTkuMDEzLTE5LjAxMiw0NC4yOTEtMjkuNDgyLDcxLjE3OC0yOS40ODJjMjYuODg4LDAsNTIuMTY2LDEwLjQ3LDcxLjE3OSwyOS40ODJsNTMuNTcxLDUzLjU3MWw1My41NzEtNTMuNTcxICAgIGMxOS4wMTMtMTkuMDEzLDQ0LjI5MS0yOS40ODIsNzEuMTc4LTI5LjQ4MmMyNi44ODksMCw1Mi4xNjcsMTAuNDcsNzEuMTc5LDI5LjQ4MmMxOS4wMTIsMTkuMDEyLDI5LjQ4Miw0NC4yOTEsMjkuNDgyLDcxLjE3OSAgICBzLTEwLjQ3LDUyLjE2Ni0yOS40ODIsNzEuMTc4TDQyOC4yNTksMjYwLjQ5OXoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+"
+            />
+          </button>
+          <div class="dropdown-contentmedical" id="dropdown-contentmedical">
+            <a tabindex="1">Consultations</a>
+            <a tabindex="1">Diagnostic Tests</a>
+            <a tabindex="1">Health Checkups</a>
+          </div>
         </div>
         <div class="container__left__icon">
           <h4><a href="/pages/packs.html" tabindex="1">Active Packs and Subscriptions</a></h4>
@@ -145,18 +151,12 @@
             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDMgNTEyLjAwMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDc3Ljk1OCwyNjIuNjMzYy0yLjA2LTQuMjE1LTIuMDYtOS4wNDksMC0xMy4yNjNsMTkuMDk2LTM5LjA2NWMxMC42MzItMjEuNzUxLDIuMjA4LTQ3LjY3Ni0xOS4xNzgtNTkuMDIzbC0zOC40MS0yMC4zOCAgICBjLTQuMTQ0LTIuMTk4LTYuOTg1LTYuMTEtNy43OTYtMTAuNzI5bC03LjUxMi00Mi44MjljLTQuMTgzLTIzLjg0Ni0yNi4yNDEtMzkuODctNTAuMjA4LTM2LjQ3OWwtNDMuMDUzLDYuMDkgICAgYy00LjY0NywwLjY1Ni05LjI0Mi0wLjgzOC0xMi42MTMtNC4wOTlsLTMxLjI1MS0zMC4yMzJjLTE3LjQwMS0xNi44MzQtNDQuNjYxLTE2LjgzNS02Mi4wNjEsMEwxOTMuNzIsNDIuODU5ICAgIGMtMy4zNzIsMy4yNjItNy45NjcsNC43NTMtMTIuNjEzLDQuMDk5bC00My4wNTMtNi4wOWMtMjMuOTc1LTMuMzkzLTQ2LjAyNSwxMi42MzMtNTAuMjA4LDM2LjQ3OWwtNy41MTIsNDIuODI3ICAgIGMtMC44MTEsNC42Mi0zLjY1Miw4LjUzMS03Ljc5NSwxMC43M2wtMzguNDEsMjAuMzhjLTIxLjM4NiwxMS4zNDYtMjkuODEsMzcuMjczLTE5LjE3OCw1OS4wMjRsMTkuMDk1LDM5LjA2NCAgICBjMi4wNiw0LjIxNSwyLjA2LDkuMDQ5LDAsMTMuMjYzbC0xOS4wOTYsMzkuMDY0Yy0xMC42MzIsMjEuNzUxLTIuMjA4LDQ3LjY3NiwxOS4xNzgsNTkuMDIzbDM4LjQxLDIwLjM4ICAgIGM0LjE0NCwyLjE5OCw2Ljk4NSw2LjExLDcuNzk2LDEwLjcyOWw3LjUxMiw0Mi44MjljMy44MDgsMjEuNzA4LDIyLjQyMiwzNi45MzIsNDMuODE1LDM2LjkzYzIuMTA3LDAsNC4yNDUtMC4xNDgsNi4zOTQtMC40NTIgICAgbDQzLjA1My02LjA5YzQuNjQzLTAuNjU5LDkuMjQxLDAuODM4LDEyLjYxMyw0LjA5OWwzMS4yNTEsMzAuMjMyYzguNzAyLDguNDE4LDE5Ljg2NCwxMi42MjYsMzEuMDMsMTIuNjI1ICAgIGMxMS4xNjMtMC4wMDEsMjIuMzMyLTQuMjA5LDMxLjAzLTEyLjYyNWwzMS4yNTItMzAuMjMyYzMuMzcyLTMuMjYxLDcuOTY4LTQuNzUxLDEyLjYxMy00LjA5OWw0My4wNTMsNi4wOSAgICBjMjMuOTc4LDMuMzkyLDQ2LjAyNS0xMi42MzMsNTAuMjA4LTM2LjQ3OWw3LjUxMy00Mi44MjdjMC44MTEtNC42MiwzLjY1Mi04LjUzMSw3Ljc5NS0xMC43M2wzOC40MS0yMC4zOCAgICBjMjEuMzg2LTExLjM0NiwyOS44MS0zNy4yNzMsMTkuMTc4LTU5LjAyNEw0NzcuOTU4LDI2Mi42MzN6IE00NjQuMDM1LDMzNC42MzVsLTM4LjQxLDIwLjM4ICAgIGMtMTIuMjQ2LDYuNDk5LTIwLjY0NSwxOC4wNTctMjMuMDQsMzEuNzEzbC03LjUxMiw0Mi44MjhjLTEuNDE1LDguMDY4LTguODc0LDEzLjQ4Ny0xNi45ODcsMTIuMzQybC00My4wNTMtNi4wOSAgICBjLTEzLjczLTEuOTQ1LTI3LjMxNiwyLjQ3NC0zNy4yODEsMTIuMTEzTDI2Ni41LDQ3OC4xNTJjLTUuODg2LDUuNjk0LTE1LjEwOSw1LjY5NC0yMC45OTcsMGwtMzEuMjUxLTMwLjIzMiAgICBjLTguNDIyLTguMTQ3LTE5LjQzMi0xMi41NjItMzAuOTI2LTEyLjU2MmMtMi4xMDYsMC00LjIyOSwwLjE0OC02LjM1NSwwLjQ0OWwtNDMuMDUzLDYuMDkgICAgYy04LjEwNiwxLjE0Ni0xNS41NzEtNC4yNzQtMTYuOTg3LTEyLjM0MmwtNy41MTMtNDIuODI5Yy0yLjM5Ni0xMy42NTYtMTAuNzk0LTI1LjIxNS0yMy4wNDEtMzEuNzEybC0zOC40MS0yMC4zOCAgICBjLTcuMjM2LTMuODM5LTEwLjA4Ni0xMi42MS02LjQ4OS0xOS45NjlsMTkuMDk2LTM5LjA2NWM2LjA4OC0xMi40NTYsNi4wODgtMjYuNzQyLDAtMzkuMTk4bC0xOS4wOTYtMzkuMDY1ICAgIGMtMy41OTctNy4zNTktMC43NDctMTYuMTMsNi40ODktMTkuOTY5bDM4LjQxLTIwLjM4YzEyLjI0Ni02LjQ5OSwyMC42NDUtMTguMDU3LDIzLjA0LTMxLjcxM2w3LjUxMi00Mi44MjggICAgYzEuNDE2LTguMDY4LDguODc0LTEzLjQ4OCwxNi45ODctMTIuMzQybDQzLjA1Myw2LjA5YzEzLjcyNSwxLjk0MywyNy4zMTYtMi40NzQsMzcuMjgxLTEyLjExM2wzMS4yNTItMzAuMjMyICAgIGM1Ljg4Ni01LjY5NCwxNS4xMDktNS42OTQsMjAuOTk3LDBsMzEuMjUxLDMwLjIzMmM5Ljk2NSw5LjY0LDIzLjU1NCwxNC4wNTYsMzcuMjgxLDEyLjExM2w0My4wNTMtNi4wOSAgICBjOC4xMDctMS4xNDcsMTUuNTcyLDQuMjc0LDE2Ljk4NywxMi4zNDJsNy41MTIsNDIuODI5YzIuMzk2LDEzLjY1NiwxMC43OTQsMjUuMjE1LDIzLjA0MSwzMS43MTJsMzguNDEsMjAuMzggICAgYzcuMjM2LDMuODM5LDEwLjA4NiwxMi42MSw2LjQ4OSwxOS45NjlsLTE5LjA5NiwzOS4wNjRjLTYuMDg4LDEyLjQ1NS02LjA4OCwyNi43NDMsMCwzOS4xOThsMTkuMDk2LDM5LjA2NCAgICBDNDc0LjEyMSwzMjIuMDI0LDQ3MS4yNzEsMzMwLjc5Niw0NjQuMDM1LDMzNC42MzV6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik0zNjMuODg2LDE0OC4xMTZjLTUuNzY1LTUuNzY2LTE1LjExNS01Ljc2Ni0yMC44ODEsMEwxNDguMTE2LDM0My4wMDZjLTUuNzY2LDUuNzY2LTUuNzY2LDE1LjExNSwwLDIwLjg4MSAgICBjMi44ODMsMi44ODMsNi42NjIsNC4zMjUsMTAuNDQsNC4zMjVjMy43NzgsMCw3LjU1OC0xLjQ0MSwxMC40NC00LjMyNWwxOTQuODg5LTE5NC44ODkgICAgQzM2OS42NTMsMTYzLjIzMSwzNjkuNjUzLDE1My44ODMsMzYzLjg4NiwxNDguMTE2eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMTk2Ljk0MSwxMjMuMTE2Yy0yOS44NTIsMC01NC4xMzksMjQuMjg3LTU0LjEzOSw1NC4xMzlzMjQuMjg3LDU0LjEzOSw1NC4xMzksNTQuMTM5czU0LjEzOS0yNC4yODcsNTQuMTM5LTU0LjEzOSAgICBTMjI2Ljc5MywxMjMuMTE2LDE5Ni45NDEsMTIzLjExNnogTTE5Ni45NDEsMjAxLjg2M2MtMTMuNTY5LDAtMjQuNjA4LTExLjAzOS0yNC42MDgtMjQuNjA5YzAtMTMuNTY5LDExLjAzOS0yNC42MDgsMjQuNjA4LTI0LjYwOCAgICBjMTMuNTY5LDAsMjQuNjA5LDExLjAzOSwyNC42MDksMjQuNjA4QzIyMS41NDksMTkwLjgyNCwyMTAuNTEsMjAxLjg2MywxOTYuOTQxLDIwMS44NjN6IiBmaWxsPSIjMDAwMDAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik0zMTUuMDYxLDI4MC42MWMtMjkuODUyLDAtNTQuMTM5LDI0LjI4Ny01NC4xMzksNTQuMTM5czI0LjI4Nyw1NC4xMzksNTQuMTM5LDU0LjEzOSAgICBjMjkuODUyLDAsNTQuMTM5LTI0LjI4Nyw1NC4xMzktNTQuMTM5UzM0NC45MTMsMjgwLjYxLDMxNS4wNjEsMjgwLjYxeiBNMzE1LjA2MSwzNTkuMzU3Yy0xMy41NjksMC0yNC42MDktMTEuMDM5LTI0LjYwOS0yNC42MDggICAgczExLjAzOS0yNC42MDgsMjQuNjA5LTI0LjYwOGMxMy41NjksMCwyNC42MDgsMTEuMDM5LDI0LjYwOCwyNC42MDhTMzI4LjYzLDM1OS4zNTcsMzE1LjA2MSwzNTkuMzU3eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4="
           />
         </div>
-        <div class="container__left__icon1" >
-          <button onclick="myFunction()" class="dropbtnmedical" id="dropbtnmedical" style="border-right: #ff3278 4px solid;" >
-            <h4><a tabindex="1">Account</a></h4>
-            <img 
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTI3Mi4wNjYgNTEyaC0zMi4xMzNjLTI1Ljk4OSAwLTQ3LjEzNC0yMS4xNDQtNDcuMTM0LTQ3LjEzM3YtMTAuODcxYy0xMS4wNDktMy41My0yMS43ODQtNy45ODYtMzIuMDk3LTEzLjMyM2wtNy43MDQgNy43MDRjLTE4LjY1OSAxOC42ODItNDguNTQ4IDE4LjEzNC02Ni42NjUtLjAwN2wtMjIuNzExLTIyLjcxYy0xOC4xNDktMTguMTI5LTE4LjY3MS00OC4wMDguMDA2LTY2LjY2NWw3LjY5OC03LjY5OGMtNS4zMzctMTAuMzEzLTkuNzkyLTIxLjA0Ni0xMy4zMjMtMzIuMDk3aC0xMC44N2MtMjUuOTg4IDAtNDcuMTMzLTIxLjE0NC00Ny4xMzMtNDcuMTMzdi0zMi4xMzRjMC0yNS45ODkgMjEuMTQ1LTQ3LjEzMyA0Ny4xMzQtNDcuMTMzaDEwLjg3YzMuNTMxLTExLjA1IDcuOTg2LTIxLjc4NCAxMy4zMjMtMzIuMDk3bC03LjcwNC03LjcwM2MtMTguNjY2LTE4LjY0Ni0xOC4xNTEtNDguNTI4LjAwNi02Ni42NjVsMjIuNzEzLTIyLjcxMmMxOC4xNTktMTguMTg0IDQ4LjA0MS0xOC42MzggNjYuNjY0LjAwNmw3LjY5NyA3LjY5N2MxMC4zMTMtNS4zMzYgMjEuMDQ4LTkuNzkyIDMyLjA5Ny0xMy4zMjN2LTEwLjg3YzAtMjUuOTg5IDIxLjE0NC00Ny4xMzMgNDcuMTM0LTQ3LjEzM2gzMi4xMzNjMjUuOTg5IDAgNDcuMTMzIDIxLjE0NCA0Ny4xMzMgNDcuMTMzdjEwLjg3MWMxMS4wNDkgMy41MyAyMS43ODQgNy45ODYgMzIuMDk3IDEzLjMyM2w3LjcwNC03LjcwNGMxOC42NTktMTguNjgyIDQ4LjU0OC0xOC4xMzQgNjYuNjY1LjAwN2wyMi43MTEgMjIuNzFjMTguMTQ5IDE4LjEyOSAxOC42NzEgNDguMDA4LS4wMDYgNjYuNjY1bC03LjY5OCA3LjY5OGM1LjMzNyAxMC4zMTMgOS43OTIgMjEuMDQ2IDEzLjMyMyAzMi4wOTdoMTAuODdjMjUuOTg5IDAgNDcuMTM0IDIxLjE0NCA0Ny4xMzQgNDcuMTMzdjMyLjEzNGMwIDI1Ljk4OS0yMS4xNDUgNDcuMTMzLTQ3LjEzNCA0Ny4xMzNoLTEwLjg3Yy0zLjUzMSAxMS4wNS03Ljk4NiAyMS43ODQtMTMuMzIzIDMyLjA5N2w3LjcwNCA3LjcwNGMxOC42NjYgMTguNjQ2IDE4LjE1MSA0OC41MjgtLjAwNiA2Ni42NjVsLTIyLjcxMyAyMi43MTJjLTE4LjE1OSAxOC4xODQtNDguMDQxIDE4LjYzOC02Ni42NjQtLjAwNmwtNy42OTctNy42OTdjLTEwLjMxMyA1LjMzNi0yMS4wNDggOS43OTItMzIuMDk3IDEzLjMyM3YxMC44NzFjMCAyNS45ODctMjEuMTQ0IDQ3LjEzMS00Ny4xMzQgNDcuMTMxem0tMTA2LjM0OS0xMDIuODNjMTQuMzI3IDguNDczIDI5Ljc0NyAxNC44NzQgNDUuODMxIDE5LjAyNSA2LjYyNCAxLjcwOSAxMS4yNTIgNy42ODMgMTEuMjUyIDE0LjUyNHYyMi4xNDhjMCA5LjQ0NyA3LjY4NyAxNy4xMzMgMTcuMTM0IDE3LjEzM2gzMi4xMzNjOS40NDcgMCAxNy4xMzQtNy42ODYgMTcuMTM0LTE3LjEzM3YtMjIuMTQ4YzAtNi44NDEgNC42MjgtMTIuODE1IDExLjI1Mi0xNC41MjQgMTYuMDg0LTQuMTUxIDMxLjUwNC0xMC41NTIgNDUuODMxLTE5LjAyNSA1Ljg5NS0zLjQ4NiAxMy40LTIuNTM4IDE4LjI0MyAyLjMwNWwxNS42ODggMTUuNjg5YzYuNzY0IDYuNzcyIDE3LjYyNiA2LjYxNSAyNC4yMjQuMDA3bDIyLjcyNy0yMi43MjZjNi41ODItNi41NzQgNi44MDItMTcuNDM4LjAwNi0yNC4yMjVsLTE1LjY5NS0xNS42OTVjLTQuODQyLTQuODQyLTUuNzktMTIuMzQ4LTIuMzA1LTE4LjI0MiA4LjQ3My0xNC4zMjYgMTQuODczLTI5Ljc0NiAxOS4wMjQtNDUuODMxIDEuNzEtNi42MjQgNy42ODQtMTEuMjUxIDE0LjUyNC0xMS4yNTFoMjIuMTQ3YzkuNDQ3IDAgMTcuMTM0LTcuNjg2IDE3LjEzNC0xNy4xMzN2LTMyLjEzNGMwLTkuNDQ3LTcuNjg3LTE3LjEzMy0xNy4xMzQtMTcuMTMzaC0yMi4xNDdjLTYuODQxIDAtMTIuODE0LTQuNjI4LTE0LjUyNC0xMS4yNTEtNC4xNTEtMTYuMDg1LTEwLjU1Mi0zMS41MDUtMTkuMDI0LTQ1LjgzMS0zLjQ4NS01Ljg5NC0yLjUzNy0xMy40IDIuMzA1LTE4LjI0MmwxNS42ODktMTUuNjg5YzYuNzgyLTYuNzc0IDYuNjA1LTE3LjYzNC4wMDYtMjQuMjI1bC0yMi43MjUtMjIuNzI1Yy02LjU4Ny02LjU5Ni0xNy40NTEtNi43ODktMjQuMjI1LS4wMDZsLTE1LjY5NCAxNS42OTVjLTQuODQyIDQuODQzLTEyLjM1IDUuNzkxLTE4LjI0MyAyLjMwNS0xNC4zMjctOC40NzMtMjkuNzQ3LTE0Ljg3NC00NS44MzEtMTkuMDI1LTYuNjI0LTEuNzA5LTExLjI1Mi03LjY4My0xMS4yNTItMTQuNTI0di0yMi4xNWMwLTkuNDQ3LTcuNjg3LTE3LjEzMy0xNy4xMzQtMTcuMTMzaC0zMi4xMzNjLTkuNDQ3IDAtMTcuMTM0IDcuNjg2LTE3LjEzNCAxNy4xMzN2MjIuMTQ4YzAgNi44NDEtNC42MjggMTIuODE1LTExLjI1MiAxNC41MjQtMTYuMDg0IDQuMTUxLTMxLjUwNCAxMC41NTItNDUuODMxIDE5LjAyNS01Ljg5NiAzLjQ4NS0xMy40MDEgMi41MzctMTguMjQzLTIuMzA1bC0xNS42ODgtMTUuNjg5Yy02Ljc2NC02Ljc3Mi0xNy42MjctNi42MTUtMjQuMjI0LS4wMDdsLTIyLjcyNyAyMi43MjZjLTYuNTgyIDYuNTc0LTYuODAyIDE3LjQzNy0uMDA2IDI0LjIyNWwxNS42OTUgMTUuNjk1YzQuODQyIDQuODQyIDUuNzkgMTIuMzQ4IDIuMzA1IDE4LjI0Mi04LjQ3MyAxNC4zMjYtMTQuODczIDI5Ljc0Ni0xOS4wMjQgNDUuODMxLTEuNzEgNi42MjQtNy42ODQgMTEuMjUxLTE0LjUyNCAxMS4yNTFoLTIyLjE0OGMtOS40NDcuMDAxLTE3LjEzNCA3LjY4Ny0xNy4xMzQgMTcuMTM0djMyLjEzNGMwIDkuNDQ3IDcuNjg3IDE3LjEzMyAxNy4xMzQgMTcuMTMzaDIyLjE0N2M2Ljg0MSAwIDEyLjgxNCA0LjYyOCAxNC41MjQgMTEuMjUxIDQuMTUxIDE2LjA4NSAxMC41NTIgMzEuNTA1IDE5LjAyNCA0NS44MzEgMy40ODUgNS44OTQgMi41MzcgMTMuNC0yLjMwNSAxOC4yNDJsLTE1LjY4OSAxNS42ODljLTYuNzgyIDYuNzc0LTYuNjA1IDE3LjYzNC0uMDA2IDI0LjIyNWwyMi43MjUgMjIuNzI1YzYuNTg3IDYuNTk2IDE3LjQ1MSA2Ljc4OSAyNC4yMjUuMDA2bDE1LjY5NC0xNS42OTVjMy41NjgtMy41NjcgMTAuOTkxLTYuNTk0IDE4LjI0NC0yLjMwNHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yNTYgMzY3LjRjLTYxLjQyNyAwLTExMS40LTQ5Ljk3NC0xMTEuNC0xMTEuNHM0OS45NzMtMTExLjQgMTExLjQtMTExLjQgMTExLjQgNDkuOTc0IDExMS40IDExMS40LTQ5Ljk3MyAxMTEuNC0xMTEuNCAxMTEuNHptMC0xOTIuOGMtNDQuODg1IDAtODEuNCAzNi41MTYtODEuNCA4MS40czM2LjUxNiA4MS40IDgxLjQgODEuNCA4MS40LTM2LjUxNiA4MS40LTgxLjQtMzYuNTE1LTgxLjQtODEuNC04MS40eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjwvZz48L3N2Zz4="
-            />
-          </button>
-          <div class="dropdown-contentmedical" id="dropdown-contentmedical">
-            <a tabindex="1">Payment</a>
-            <a tabindex="1">Address</a>
-          </div>
-        </div> 
+        <div class="container__left__icon">
+          <h4><a href="/pages/account.html" tabindex="1">Account</a></h4>
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTI3Mi4wNjYgNTEyaC0zMi4xMzNjLTI1Ljk4OSAwLTQ3LjEzNC0yMS4xNDQtNDcuMTM0LTQ3LjEzM3YtMTAuODcxYy0xMS4wNDktMy41My0yMS43ODQtNy45ODYtMzIuMDk3LTEzLjMyM2wtNy43MDQgNy43MDRjLTE4LjY1OSAxOC42ODItNDguNTQ4IDE4LjEzNC02Ni42NjUtLjAwN2wtMjIuNzExLTIyLjcxYy0xOC4xNDktMTguMTI5LTE4LjY3MS00OC4wMDguMDA2LTY2LjY2NWw3LjY5OC03LjY5OGMtNS4zMzctMTAuMzEzLTkuNzkyLTIxLjA0Ni0xMy4zMjMtMzIuMDk3aC0xMC44N2MtMjUuOTg4IDAtNDcuMTMzLTIxLjE0NC00Ny4xMzMtNDcuMTMzdi0zMi4xMzRjMC0yNS45ODkgMjEuMTQ1LTQ3LjEzMyA0Ny4xMzQtNDcuMTMzaDEwLjg3YzMuNTMxLTExLjA1IDcuOTg2LTIxLjc4NCAxMy4zMjMtMzIuMDk3bC03LjcwNC03LjcwM2MtMTguNjY2LTE4LjY0Ni0xOC4xNTEtNDguNTI4LjAwNi02Ni42NjVsMjIuNzEzLTIyLjcxMmMxOC4xNTktMTguMTg0IDQ4LjA0MS0xOC42MzggNjYuNjY0LjAwNmw3LjY5NyA3LjY5N2MxMC4zMTMtNS4zMzYgMjEuMDQ4LTkuNzkyIDMyLjA5Ny0xMy4zMjN2LTEwLjg3YzAtMjUuOTg5IDIxLjE0NC00Ny4xMzMgNDcuMTM0LTQ3LjEzM2gzMi4xMzNjMjUuOTg5IDAgNDcuMTMzIDIxLjE0NCA0Ny4xMzMgNDcuMTMzdjEwLjg3MWMxMS4wNDkgMy41MyAyMS43ODQgNy45ODYgMzIuMDk3IDEzLjMyM2w3LjcwNC03LjcwNGMxOC42NTktMTguNjgyIDQ4LjU0OC0xOC4xMzQgNjYuNjY1LjAwN2wyMi43MTEgMjIuNzFjMTguMTQ5IDE4LjEyOSAxOC42NzEgNDguMDA4LS4wMDYgNjYuNjY1bC03LjY5OCA3LjY5OGM1LjMzNyAxMC4zMTMgOS43OTIgMjEuMDQ2IDEzLjMyMyAzMi4wOTdoMTAuODdjMjUuOTg5IDAgNDcuMTM0IDIxLjE0NCA0Ny4xMzQgNDcuMTMzdjMyLjEzNGMwIDI1Ljk4OS0yMS4xNDUgNDcuMTMzLTQ3LjEzNCA0Ny4xMzNoLTEwLjg3Yy0zLjUzMSAxMS4wNS03Ljk4NiAyMS43ODQtMTMuMzIzIDMyLjA5N2w3LjcwNCA3LjcwNGMxOC42NjYgMTguNjQ2IDE4LjE1MSA0OC41MjgtLjAwNiA2Ni42NjVsLTIyLjcxMyAyMi43MTJjLTE4LjE1OSAxOC4xODQtNDguMDQxIDE4LjYzOC02Ni42NjQtLjAwNmwtNy42OTctNy42OTdjLTEwLjMxMyA1LjMzNi0yMS4wNDggOS43OTItMzIuMDk3IDEzLjMyM3YxMC44NzFjMCAyNS45ODctMjEuMTQ0IDQ3LjEzMS00Ny4xMzQgNDcuMTMxem0tMTA2LjM0OS0xMDIuODNjMTQuMzI3IDguNDczIDI5Ljc0NyAxNC44NzQgNDUuODMxIDE5LjAyNSA2LjYyNCAxLjcwOSAxMS4yNTIgNy42ODMgMTEuMjUyIDE0LjUyNHYyMi4xNDhjMCA5LjQ0NyA3LjY4NyAxNy4xMzMgMTcuMTM0IDE3LjEzM2gzMi4xMzNjOS40NDcgMCAxNy4xMzQtNy42ODYgMTcuMTM0LTE3LjEzM3YtMjIuMTQ4YzAtNi44NDEgNC42MjgtMTIuODE1IDExLjI1Mi0xNC41MjQgMTYuMDg0LTQuMTUxIDMxLjUwNC0xMC41NTIgNDUuODMxLTE5LjAyNSA1Ljg5NS0zLjQ4NiAxMy40LTIuNTM4IDE4LjI0MyAyLjMwNWwxNS42ODggMTUuNjg5YzYuNzY0IDYuNzcyIDE3LjYyNiA2LjYxNSAyNC4yMjQuMDA3bDIyLjcyNy0yMi43MjZjNi41ODItNi41NzQgNi44MDItMTcuNDM4LjAwNi0yNC4yMjVsLTE1LjY5NS0xNS42OTVjLTQuODQyLTQuODQyLTUuNzktMTIuMzQ4LTIuMzA1LTE4LjI0MiA4LjQ3My0xNC4zMjYgMTQuODczLTI5Ljc0NiAxOS4wMjQtNDUuODMxIDEuNzEtNi42MjQgNy42ODQtMTEuMjUxIDE0LjUyNC0xMS4yNTFoMjIuMTQ3YzkuNDQ3IDAgMTcuMTM0LTcuNjg2IDE3LjEzNC0xNy4xMzN2LTMyLjEzNGMwLTkuNDQ3LTcuNjg3LTE3LjEzMy0xNy4xMzQtMTcuMTMzaC0yMi4xNDdjLTYuODQxIDAtMTIuODE0LTQuNjI4LTE0LjUyNC0xMS4yNTEtNC4xNTEtMTYuMDg1LTEwLjU1Mi0zMS41MDUtMTkuMDI0LTQ1LjgzMS0zLjQ4NS01Ljg5NC0yLjUzNy0xMy40IDIuMzA1LTE4LjI0MmwxNS42ODktMTUuNjg5YzYuNzgyLTYuNzc0IDYuNjA1LTE3LjYzNC4wMDYtMjQuMjI1bC0yMi43MjUtMjIuNzI1Yy02LjU4Ny02LjU5Ni0xNy40NTEtNi43ODktMjQuMjI1LS4wMDZsLTE1LjY5NCAxNS42OTVjLTQuODQyIDQuODQzLTEyLjM1IDUuNzkxLTE4LjI0MyAyLjMwNS0xNC4zMjctOC40NzMtMjkuNzQ3LTE0Ljg3NC00NS44MzEtMTkuMDI1LTYuNjI0LTEuNzA5LTExLjI1Mi03LjY4My0xMS4yNTItMTQuNTI0di0yMi4xNWMwLTkuNDQ3LTcuNjg3LTE3LjEzMy0xNy4xMzQtMTcuMTMzaC0zMi4xMzNjLTkuNDQ3IDAtMTcuMTM0IDcuNjg2LTE3LjEzNCAxNy4xMzN2MjIuMTQ4YzAgNi44NDEtNC42MjggMTIuODE1LTExLjI1MiAxNC41MjQtMTYuMDg0IDQuMTUxLTMxLjUwNCAxMC41NTItNDUuODMxIDE5LjAyNS01Ljg5NiAzLjQ4NS0xMy40MDEgMi41MzctMTguMjQzLTIuMzA1bC0xNS42ODgtMTUuNjg5Yy02Ljc2NC02Ljc3Mi0xNy42MjctNi42MTUtMjQuMjI0LS4wMDdsLTIyLjcyNyAyMi43MjZjLTYuNTgyIDYuNTc0LTYuODAyIDE3LjQzNy0uMDA2IDI0LjIyNWwxNS42OTUgMTUuNjk1YzQuODQyIDQuODQyIDUuNzkgMTIuMzQ4IDIuMzA1IDE4LjI0Mi04LjQ3MyAxNC4zMjYtMTQuODczIDI5Ljc0Ni0xOS4wMjQgNDUuODMxLTEuNzEgNi42MjQtNy42ODQgMTEuMjUxLTE0LjUyNCAxMS4yNTFoLTIyLjE0OGMtOS40NDcuMDAxLTE3LjEzNCA3LjY4Ny0xNy4xMzQgMTcuMTM0djMyLjEzNGMwIDkuNDQ3IDcuNjg3IDE3LjEzMyAxNy4xMzQgMTcuMTMzaDIyLjE0N2M2Ljg0MSAwIDEyLjgxNCA0LjYyOCAxNC41MjQgMTEuMjUxIDQuMTUxIDE2LjA4NSAxMC41NTIgMzEuNTA1IDE5LjAyNCA0NS44MzEgMy40ODUgNS44OTQgMi41MzcgMTMuNC0yLjMwNSAxOC4yNDJsLTE1LjY4OSAxNS42ODljLTYuNzgyIDYuNzc0LTYuNjA1IDE3LjYzNC0uMDA2IDI0LjIyNWwyMi43MjUgMjIuNzI1YzYuNTg3IDYuNTk2IDE3LjQ1MSA2Ljc4OSAyNC4yMjUuMDA2bDE1LjY5NC0xNS42OTVjMy41NjgtMy41NjcgMTAuOTkxLTYuNTk0IDE4LjI0NC0yLjMwNHoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yNTYgMzY3LjRjLTYxLjQyNyAwLTExMS40LTQ5Ljk3NC0xMTEuNC0xMTEuNHM0OS45NzMtMTExLjQgMTExLjQtMTExLjQgMTExLjQgNDkuOTc0IDExMS40IDExMS40LTQ5Ljk3MyAxMTEuNC0xMTEuNCAxMTEuNHptMC0xOTIuOGMtNDQuODg1IDAtODEuNCAzNi41MTYtODEuNCA4MS40czM2LjUxNiA4MS40IDgxLjQgODEuNCA4MS40LTM2LjUxNiA4MS40LTgxLjQtMzYuNTE1LTgxLjQtODEuNC04MS40eiIgZmlsbD0iIzAwMDAwMCIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjwvZz48L3N2Zz4="
+          />
+        </div>
         <div class="container__left__icon">
           <h4><a href="/pages/support.html" tabindex="1">Support</a></h4>
           <img
@@ -171,20 +171,43 @@
         </div>
       </div>
 
-      
+      <!--   <div class="container__left__icon1 container__left__icon">
+          <button onclick="myFunction()" class="dropbtnmedical" id="dropbtnmedical" >
+            <a tabindex="1"><h4>Medical Records</h4></a>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTUxMS44MzYsMjYwLjA0M2wtNDEuMjcxLDAuMjI1bDIuNTc4LTIuNjIxYzUwLjg5Ni01MC45NDcsNTAuODgyLTEzMy44MDMtMC4wNDYtMTg0LjczICAgIGMtNTAuOTQyLTUwLjk0My0xMzMuODMzLTUwLjk0NC0xODQuNzc2LDBsLTMyLjM2MSwzMi4zNjNsLTMyLjM2Mi0zMi4zNjJjLTUwLjk0Mi01MC45NDMtMTMzLjgzMy01MC45NDMtMTg0Ljc3NiwwICAgIEMtMTIuMTIzLDEyMy44Ni0xMi4xMjIsMjA2Ljc1LDM4Ljc4OCwyNTcuNjZsOS40NzQsOS41MzJIMHYyOS45OTVoNzguMDY4bDE3OC45NzksMTgwLjEwM2wxODMuODQ3LTE4Ni44NjVMNTEyLDI5MC4wMzggICAgTDUxMS44MzYsMjYwLjA0M3ogTTI1Ni45NDEsNDM0LjYzTDEyMC4zNTYsMjk3LjE4OGg2NS4xNjNMMjEzLjcsMjI5LjQzbDQyLjg4MSwxMzUuMjI4bDYyLjIxOC05NS40OThsMTYuNDUzLDIxLjg0MWw2My4zMzctMC4zNDYgICAgTDI1Ni45NDEsNDM0LjYzeiBNNDI4LjI1OSwyNjAuNDk5bC03OC4xMTIsMC40MjdsLTMzLjEzMS00My45NzhsLTUwLjk5MSw3OC4yNjZMMjE3LjUsMTQyLjE4NWwtNTEuOTkzLDEyNS4wMDhoLTc0Ljk2ICAgIEw2MC4wMywyMzYuNDgzYy0xOS4wMTItMTkuMDEzLTI5LjQ4Mi00NC4yOTEtMjkuNDgyLTcxLjE3OGMwLTI2Ljg4OSwxMC40Ny01Mi4xNjcsMjkuNDgzLTcxLjE3OSAgICBjMTkuMDEzLTE5LjAxMiw0NC4yOTEtMjkuNDgyLDcxLjE3OC0yOS40ODJjMjYuODg4LDAsNTIuMTY2LDEwLjQ3LDcxLjE3OSwyOS40ODJsNTMuNTcxLDUzLjU3MWw1My41NzEtNTMuNTcxICAgIGMxOS4wMTMtMTkuMDEzLDQ0LjI5MS0yOS40ODIsNzEuMTc4LTI5LjQ4MmMyNi44ODksMCw1Mi4xNjcsMTAuNDcsNzEuMTc5LDI5LjQ4MmMxOS4wMTIsMTkuMDEyLDI5LjQ4Miw0NC4yOTEsMjkuNDgyLDcxLjE3OSAgICBzLTEwLjQ3LDUyLjE2Ni0yOS40ODIsNzEuMTc4TDQyOC4yNTksMjYwLjQ5OXoiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+"
+            />
+          </button>
+          <div class="dropdown-contentmedical" id="dropdown-contentmedical">
+            <a tabindex="1">Consultations</a>
+            <a tabindex="1">Diagnostic Tests</a>
+            <a tabindex="1">Health Checkups</a>
+          </div>
+        </div> -->
       <div class="container__right">
-        <h3>WALLETS</h3>
-        <div class="account_container">
-            <div class = "payment__option">
-                <p>PAYTM</p>
-                <p>₹0</p>
-                <p style="color:pink;">LINK</p>
+        <h3>CONSULTATIONS</h3>
+        <div class="orders__container">
+            <div class="container__right__image">
+            <div>
+                <img
+                src="https://cdn-images.cure.fit/www-curefit-com/image/upload/image/mePage/no-consultation%402x.png"
+                alt="bowl Image"
+                class="right__image"
+              />
+            </div>
+         
+          <div class="button__container">
+            <h3>NO CONSULTATION YET</h3>
+            <p>Consult our General Physicans & Paediatricians to provid care from common issues to complex 
+                illness. We promise on-time consultation - no</p>
+            <button>BOOK CONSULTATION NOW</button>
             </div>
         </div>
         </div>
       </div>
       </div>
     </div>
+    <script src="/scripts/item.js"></script>
     <script>
       function fetchValues(){
         if(JSON.parse(localStorage.getItem("qty"))> 0){
@@ -195,6 +218,5 @@
       }
     </script>
     <script src="/scripts/cult.js"></script>
-    <script src="/scripts/item.js"></script>
   </body>
 </html>

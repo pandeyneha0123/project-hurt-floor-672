@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://static.cure.fit/assets/images/curefit-v-man.svg" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add from below -->
+    <script type="text/javascript" src="/scripts/login.js"></script>
+
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/fa/css/font-awesome.min.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="loginContainer" class="loginContainer">
+      <div class="login" id="login">
+        <div class="login__cross">
+          <button onclick="closeLogin()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+        <img
+          src="https://static.cure.fit/assets/images/curefit_login_logo.svg"
+          alt="logo"
+        />
+        <img
+          src="https://static.cure.fit/assets/images/curefit-name.svg"
+          alt="name"
+        />
+
+        <input type="phone" placeholder="Enter your phone number" />
+        <button class="login__continueBtn">Continue</button>
+        <li>
+          By Continuing you agree to the
+          <em style="color: red">Terms of Services</em> and
+          <em style="color: red">Privacy policy</em>.
+        </li>
+
+        <button class="login__google" onclick="changelayout()">
+          Continue with <i class="fa fa-google" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <button onclick="openLogin()">click me</button>
+  </body>
+</html>
